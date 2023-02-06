@@ -1,0 +1,18 @@
+section.component-description(data-tabs='element')
+  p Высота подстраивается под контент, но с учетом атрибута #[b rows]. Rows задает минимальную высоту, которую скрипт не переопределяет. Отсутствие атрибута #[b rows === rows="2"].
+  p В большинстве случаев вам понадобится rows="1".
+  p Если вы изменяете value у textarea через js - нужно повторно вызвать #[b resizeHeight(el)].
+  h3 Интересная деталь
+  .component__code-snippet
+    pre
+      |
+      code(class="language-js").
+        let realscrollHeight = el.scrollHeight;
+
+        if (!el.value) {
+          el.value = 0;
+          realscrollHeight = el.scrollHeight;
+          el.value = '';
+        }
+
+  p Данный участок кода фиксит баг\особенность firefox\ie. В этих браузерах при отсутствующем value scrollHeight у textarea ~ на 5% меньше чем при наличии value. Возможно такое можно встретить не только у textarea.
