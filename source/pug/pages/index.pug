@@ -1,19 +1,15 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "Лига решений" //- на страницах кроме главной используйте О нас — ProjectName
+  - const title = "WOMAZING" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
-  - const headerMods = ""
+  - const headerMods = "header__container"
   - const hasFooter = true
   - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
 block main
   main
-    +intro()
-    +site-navigation()
-    +last-added()
-    //+achievements()
-    +about()
+
 
 block modals
