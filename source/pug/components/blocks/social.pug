@@ -1,0 +1,6 @@
+mixin social(options = {})
+  ul.social&attributes(attributes)
+    each val, key in options
+      li.social__item
+        a.social__link(href="#")
+          +icon(key, val.width, val.height)

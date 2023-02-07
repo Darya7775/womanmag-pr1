@@ -1,5 +1,19 @@
 mixin footer(footerMods)
-  footer.footer(class=footerMods)
-    .container
+  footer.footer
+    .container(class=footerMods)
+      .footer__wrapper
         +logo().footer__logo
-
+        div
+          span © Все права защищены
+          a(href = "#") Политика конфиденциальности
+          a(href = "#") Публичная оферта
+      +nav().footer__nav
+      .footer__wrapper
+        a.footer__tel(href = "tel:+74958235412") +7 (495) 823-54-12
+        a.footer__email(href = "email: hello@womazing.com") hello@womazing.com
+        +social({
+          facebook: {width: 21, height: 21},
+          instagram: {width: 22, height: 22},
+          twitter: {width: 23, height: 23},
+        }).footer__social
+        img.footer__img(src="img/svg/visa-mastercard.svg", width=68, height=22, alt="VISA, MasterCard")

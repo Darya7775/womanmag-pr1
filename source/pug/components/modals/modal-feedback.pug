@@ -1,2 +1,13 @@
 mixin modal-feedback()
-  p.modal__description Обычная модалка
+  .modal.modal--preload(class="",data-modal="modal-1")
+    .modal__overlay(data-close-modal)
+    form.modal__form.form(action="https://echo.htmlacademy.ru" method="post")
+      button.form___close(type="button", data-close-modal)
+      span.form___text Заказать обратный звонок
+      label.visually-hidden(for="name") Имя
+      input.form___input(type="text", name="name", id="name", placeholder="Имя", required)
+      label.visually-hidden(for="email") E-mail
+      input.form___input(type="email", name="email", id="email", placeholder="E-mail")
+      label.visually-hidden(for="telephone") Телефон
+      input.form___input(type="tel", name="telephone", id="telephone", placeholder="Телефон", required)
+      button.form___submit(type="submit") Заказать звонок

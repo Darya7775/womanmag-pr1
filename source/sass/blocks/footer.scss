@@ -1,4 +1,33 @@
 .footer {
+  width: 100%;
+  background-color: #f1eadc;
+}
 
+.footer__container {
+  padding-top: 6.31rem;
+  padding-bottom: 6.31rem;
+
+  display: flex;
+  column-gap: 5.06rem;
+}
+
+.footer__wrapper {
+  display: grid;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.footer__logo {
+  margin-bottom: 4.56rem;
+  user-select: none;
+}
+
+div a {
+  @include hover {
+    opacity: 0.6;
+  }
 }
 

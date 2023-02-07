@@ -13,6 +13,7 @@ import {initArticleMenu} from './modules/init-article-menu';
 import {initChangeNumber} from './modules/init-change-number';
 import {initFixedNavbar} from './modules/init-fixed-navbar';
 import {initYearCorrection} from './modules/init-year-correction';
+import {initModals} from './modules/init-modals';
 // import {initSearch} from './modules/init-search.js';
 
 
@@ -43,6 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initArticleMenu();
     initChangeNumber();
     initFixedNavbar();
+    initModals();
     // initSearch();
   });
 });
