@@ -4,7 +4,7 @@
 @import "vendor/normalize";
 @import "vendor/prism";
 // Swiper 7.4.1
-// @import "vendor/swiper";
+@import "vendor/swiper";
 
 // Global
 // ---------------------------------
@@ -25,28 +25,29 @@
 @import "blocks/social";
 @import "blocks/modal";
 @import "blocks/form";
+@import "blocks/main";
 
 // Components
 // ---------------------------------
 
-@import "../components/auto-resize-textarea/style/auto-resize-textarea";
-@import "../components/phone-mask/style/phone-mask";
-@import "../components/navigation-changer/style/navigation-changer";
-@import "../components/custom-select/style/custom-select";
-@import "../components/scroll-translator/style/scroll-translator";
-@import "../components/modals/style/modal";
-@import "../components/cookies/style/cookies";
-@import "../components/accordion/style/accordion";
-@import "../components/accordion/style/data-accordion";
-@import "../components/tabs/style/tabs";
-//@import "../components/tabs/style/data-tabs";
-@import "../components/form-validate/style/custom-input";
-@import "../components/form-validate/style/custom-toggle";
-@import "../components/form-validate/style/toggle-group";
-@import "../components/dynamic-adaptive/style/dynamic-adaptive";
-@import "../components/adaptive-runner/style/adaptive-runner";
-@import "../components/simple-cursor/style/simple-cursor";
-@import "../components/marquee/style/marquee";
+// @import "../components/auto-resize-textarea/style/auto-resize-textarea";
+// @import "../components/phone-mask/style/phone-mask";
+// @import "../components/navigation-changer/style/navigation-changer";
+// @import "../components/custom-select/style/custom-select";
+// @import "../components/scroll-translator/style/scroll-translator";
+// @import "../components/modals/style/modal";
+// @import "../components/cookies/style/cookies";
+// @import "../components/accordion/style/accordion";
+// @import "../components/accordion/style/data-accordion";
+// @import "../components/tabs/style/tabs";
+// //@import "../components/tabs/style/data-tabs";
+// @import "../components/form-validate/style/custom-input";
+// @import "../components/form-validate/style/custom-toggle";
+// @import "../components/form-validate/style/toggle-group";
+// @import "../components/dynamic-adaptive/style/dynamic-adaptive";
+// @import "../components/adaptive-runner/style/adaptive-runner";
+// @import "../components/simple-cursor/style/simple-cursor";
+// @import "../components/marquee/style/marquee";
 
 // ---------------------------------
 

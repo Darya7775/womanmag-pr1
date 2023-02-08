@@ -58,3 +58,23 @@
   position: absolute;
   z-index: 2;
 }
+
+.modal__succes {
+  position: absolute;
+  z-index: 2;
+
+  background-color: $color-default-white;
+  padding: 4.38rem;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 3rem;
+
+  & .modal__text {
+    @include Raleway500;
+    font-size: 1.56em;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+  }
+}

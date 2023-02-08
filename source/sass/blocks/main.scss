@@ -1,0 +1,98 @@
+.main {
+  width: 100%;
+  background-color: $color-default-white;
+}
+
+.main__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main__list {
+  width: 34.56rem;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.main__item {
+  padding-top: 4rem;
+}
+
+.main__title {
+  @include Raleway500;
+  font-size: 3.44em;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+
+  margin: 0 0 2.81rem;
+}
+
+.main__text {
+  width: 24.06rem;
+  margin: 0 0 3.25rem;
+
+  font-size: 1.25em;
+  line-height: 140%;
+  text-align: right;
+  letter-spacing: 0.02em;
+}
+
+.main__button {
+  display: flex;
+}
+
+.main__button_scroll {
+  width: 67px;
+  height: 67px;
+
+  border: none;
+  background: rgba(110, 156, 159, 0.1);
+  background-image: url("../img/svg/main-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  cursor: pointer;
+  user-select: none;
+
+  @include hover {
+    opacity: 0.6;
+  }
+}
+
+.main__button_open-mag {
+  border: none;
+  background-color: #6e9c9f;
+  padding: 1.38rem 3.13rem;
+
+  color: $color-default-white;
+
+  cursor: pointer;
+  user-select: none;
+
+  @include hover {
+    opacity: 0.6;
+  }
+}
+
+.main__pagination .swiper-pagination-bullet {
+  width: 30px;
+  height: 4px;
+
+  background-color: #d1d1d1;
+}
+
+.main__pagination .swiper-pagination-bullet-active {
+  background-color: $color-default-black;
+}
+
+.main__wrap_img {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main__img {
+
+}
+

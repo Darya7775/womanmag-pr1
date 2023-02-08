@@ -1,0 +1,26 @@
+mixin main()
+  section.main
+    .container.main__container
+      .main__wrap.swiper
+        ul.main__list.swiper-wrapper
+          li.main__item.swiper-slide
+            h2.main__title Новые поступления в&nbsp;этом сезоне
+            p.main__text Утонченные сочетания и&nbsp;бархатные оттенки&nbsp;&mdash; вот&nbsp;то, что вы&nbsp;искали в&nbsp;этом сезоне. Время исследовать.
+            .main__button
+              button.main__button_scroll
+              button.main__button_open-mag Открыть магазин
+          li.main__item.swiper-slide
+            h2.main__title Что-то новенькое. Мы&nbsp;заждались тебя.
+            p.main__text Надоело искать себя в&nbsp;сером городе? Настало время новых идей, свежих красок и&nbsp;вдохновения с&nbsp;Womazing!
+            .main__button
+              button.main__button_scroll
+              button.main__button_open-mag Открыть магазин
+          li.main__item.swiper-slide
+            h2.main__title Включай новый сезон с&nbsp;WOMAZING
+            p.main__text Утонченные сочетания и&nbsp;бархатные оттенки&nbsp;&mdash; вот&nbsp;то, что вы&nbsp;искали в&nbsp;этом сезоне. Время исследовать.
+            .main__button
+              button.main__button_scroll
+              button.main__button_open-mag Открыть магазин
+        .main__pagination.swiper-pagination
+      .main__wrap_img
+        +picture("content", "main-foto-big", "jpg", 410, 646, "девушка в плаще").main__img

@@ -89,7 +89,46 @@
           </div>
         </div>
       </header>
-      <main></main>
+      <main>
+        <section class="main">
+          <div class="container main__container">
+            <div class="main__wrap swiper">
+              <ul class="main__list swiper-wrapper">
+                <li class="main__item swiper-slide">
+                  <h2 class="main__title">Новые поступления в&nbsp;этом сезоне</h2>
+                  <p class="main__text">Утонченные сочетания и&nbsp;бархатные оттенки&nbsp;&mdash; вот&nbsp;то, что вы&nbsp;искали в&nbsp;этом сезоне. Время исследовать.</p>
+                  <div class="main__button">
+                    <button class="main__button_scroll"></button>
+                    <button class="main__button_open-mag">Открыть магазин</button>
+                  </div>
+                </li>
+                <li class="main__item swiper-slide">
+                  <h2 class="main__title">Что-то новенькое. Мы&nbsp;заждались тебя.</h2>
+                  <p class="main__text">Надоело искать себя в&nbsp;сером городе? Настало время новых идей, свежих красок и&nbsp;вдохновения с&nbsp;Womazing!</p>
+                  <div class="main__button">
+                    <button class="main__button_scroll"></button>
+                    <button class="main__button_open-mag">Открыть магазин</button>
+                  </div>
+                </li>
+                <li class="main__item swiper-slide">
+                  <h2 class="main__title">Включай новый сезон с&nbsp;WOMAZING</h2>
+                  <p class="main__text">Утонченные сочетания и&nbsp;бархатные оттенки&nbsp;&mdash; вот&nbsp;то, что вы&nbsp;искали в&nbsp;этом сезоне. Время исследовать.</p>
+                  <div class="main__button">
+                    <button class="main__button_scroll"></button>
+                    <button class="main__button_open-mag">Открыть магазин</button>
+                  </div>
+                </li>
+              </ul>
+              <div class="main__pagination swiper-pagination"></div>
+            </div>
+            <div class="main__wrap_img">
+              <picture class="main__img">
+                <source type="image/webp" srcset="img/content/main-foto-big.webp, img/content/main-foto-big@2x.webp 2x"><img src="img/content/main-foto-big.jpg" srcset="img/content/main-foto-big@2x.jpg 2x" width="410" height="646" alt="девушка в плаще">
+              </picture>
+            </div>
+          </div>
+        </section>
+      </main>
       <footer class="footer">
         <div class="container footer__container">
           <div class="footer__wrapper">
@@ -130,18 +169,36 @@
         </div>
       </footer>
     </div>
-    <div class="modal modal--preload" data-modal="modal-1">
+    <div class="modal modal--preload" data-modal="modal-1" id="modal-1">
       <div class="modal__overlay" data-close-modal></div>
-      <form class="modal__form form" action="https://echo.htmlacademy.ru" method="post">
-        <button class="form___close" type="button" data-close-modal></button><span class="form___text">Заказать обратный звонок</span>
-        <label class="visually-hidden" for="name">Имя</label>
-        <input class="form___input" type="text" name="name" id="name" placeholder="Имя" required>
-        <label class="visually-hidden" for="email">E-mail</label>
-        <input class="form___input" type="email" name="email" id="email" placeholder="E-mail">
-        <label class="visually-hidden" for="telephone">Телефон</label>
-        <input class="form___input" type="tel" name="telephone" id="telephone" placeholder="Телефон" required>
-        <button class="form___submit" type="submit">Заказать звонок</button>
-      </form>
+      <div class="modal__form" data-form-validate data-callback="base">
+        <form class="form" action="https://echo.htmlacademy.ru" method="post">
+          <button class="form___close" type="button" data-close-modal></button><span class="form___text">Заказать обратный звонок</span>
+          <div class="form__name" data-required data-limitation="cyrillic" data-validate-type="text" data-message-base="Поле обязательно к заполнению">
+            <label class="visually-hidden" for="name">Имя</label>
+            <input type="text" name="name" id="name" placeholder="Имя" required>
+          </div>
+          <div class="form__email" data-validate-type="email">
+            <label class="visually-hidden" for="email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="E-mail">
+          </div>
+          <div class="form__tel" data-required data-validate-type="phone" data-message-base="Поле обязательно к заполнению">
+            <label class="visually-hidden" for="telephone">Телефон</label>
+            <input type="tel" name="telephone" id="telephone" placeholder="Телефон" required>
+          </div>
+          <div class="form__checkbox" data-required data-validate-type="checkbox" data-message-base="Необходимо Ваше согласие!">
+            <input type="checkbox" name="consentToDataProcessing" id="consent" required>
+            <label for="consent">Я согласен на обработку моих персональных данных</label>
+          </div>
+          <button class="form___submit" type="submit">Заказать звонок</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal" data-modal="modal-2" id="modal-2">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__succes"><span class="modal__text">Отлично! Мы скоро вам перезвоним.</span>
+        <button class="form___submit" type="button" data-close-modal>Закрыть</button>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
