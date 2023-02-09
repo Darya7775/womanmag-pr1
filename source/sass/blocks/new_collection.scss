@@ -1,0 +1,103 @@
+.collection {
+  width: 100%;
+}
+
+.collection__container {
+  padding-top: 1.13rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.collection__title {
+  @include title;
+  margin: 0 0 5.75rem;
+}
+
+.collection__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.88rem;
+
+  margin-bottom: 4.06rem;
+}
+
+.collection__wrap {
+  position: relative;
+
+  margin-bottom: 1.5rem;
+}
+
+.collection__wrap img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.collection__link-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(110, 156, 159, 0.64);
+  background-image: url("../img/svg/collection-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  opacity: 0;
+
+  @include hover {
+    opacity: 1;
+  }
+
+  @include focus {
+    opacity: 1;
+  }
+}
+
+.collection__item-title {
+  @include Raleway500;
+  font-size: 1.25em;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  text-align: center;
+
+  margin: 0 0 0.44rem;
+}
+
+.collection__price {
+  @include Raleway500;
+  font-size: 0.94em;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #998e78;
+
+  display: block;
+  text-align: center;
+}
+
+.collection__link {
+  display: inline-flex;
+  border: 1px solid #6e9c9f;
+  padding: 1.38rem 3.13rem;
+
+  align-self: center;
+
+  @include hover {
+    border: 1px solid #6e9c9f;
+    background-color: #6e9c9f;
+    color: #ffffff;
+  }
+
+  @include focus {
+    border: 1px solid #6e9c9f;
+    background-color: #6e9c9f;
+    color: #ffffff;
+  }
+}

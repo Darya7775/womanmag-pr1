@@ -1,0 +1,79 @@
+.command {
+  width: 100%;
+}
+
+.command__container {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+.command__title {
+  @include title;
+
+  margin: 0 0 5.75rem;
+}
+
+.command__wrapper {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  gap: 7.75rem;
+}
+
+.command__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.command__swiper .swiper-pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 7%;
+  transform: translate(-50%, -7%);
+}
+
+.command__pagination .swiper-pagination-bullet {
+  width: 30px;
+  height: 4px;
+  border-radius: 0;
+  background-color: #6f706f;
+}
+
+.command__pagination .swiper-pagination-bullet-active {
+  background-color: #6e9c9f;
+}
+
+.command__title-wrap {
+  @include subtitle;
+
+  margin: 0 0 1.75rem;
+}
+
+.command__text {
+  margin: 0 0 1.75rem;
+}
+
+.command__link {
+  color: #6e9c9f;
+
+  @include hover {
+    border-bottom: 1px solid #cededf;
+  }
+}
+
+.command__img img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.command__navigation-prev,
+.command__navigation-next {
+  color: #6e9c9f;
+  font-size: 2rem;
+}
+
+.command__navigation-prev::after,
+.command__navigation-next::after {
+  font-size: 2rem;
+}

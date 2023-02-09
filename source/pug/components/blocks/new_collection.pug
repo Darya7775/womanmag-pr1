@@ -1,0 +1,24 @@
+mixin collection()
+  section.collection(id = "collection")
+    .container.collection__container
+      h2.collection__title Новая коллекция
+      ul.collection__list
+        li.collection__item
+          .collection__wrap
+            a.collection__link-img(href = "#")
+            +picture("content", "collection-1", "jpg", 350, 478, "девушка в футболке")
+          h3.collection__item-title Футболка USA
+          span.collection__price $129
+        li.collection__item
+          .collection__wrap
+            a.collection__link-img(href = "#")
+            +picture("content", "collection-2", "jpg", 350, 478, "девушка в купальнике")
+          h3.collection__item-title Купальник Glow
+          span.collection__price $129
+        li.collection__item
+          .collection__wrap
+            a.collection__link-img(href = "#")
+            +picture("content", "collection-3", "jpg", 350, 478, "девушка в свитшоте")
+          h3.collection__item-title Свитшот Sweet Shot
+          span.collection__price $129
+      a.collection__link(href = "shop.html") Открыть магазин

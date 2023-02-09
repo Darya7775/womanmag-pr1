@@ -15,7 +15,7 @@
 // import {initYearCorrection} from './modules/init-year-correction';
 import {initModals} from './modules/init-modals';
 import {Form} from './utils/form/form';
-import Swiper, {Pagination} from 'swiper';
+import Swiper, {Pagination, Navigation, Autoplay} from 'swiper';
 // import {initSearch} from './modules/init-search.js';
 
 
@@ -33,16 +33,52 @@ window.addEventListener('DOMContentLoaded', () => {
   // initHeaderObserver();
   // initYearCorrection();
 
-  void new Swiper('.swiper', {
-    modules: [Pagination],
+  // Modules
+  // ---------------------------------
+  // main
+  void new Swiper('.main__wrap', {
+    modules: [Pagination, Autoplay],
     pagination: {
       el: '.main__pagination',
       clickable: true,
     },
+    autoplay: {
+      delay: 1000,
+      stopOnLastSlide: true,
+      disableOnInteraction: false,
+    },
   });
 
-  // Modules
-  // ---------------------------------
+  const linkMain = document.querySelectorAll('.main__button_scroll');
+  linkMain.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const id = link.getAttribute('href');
+
+      document.querySelector(id).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    });
+  });
+
+  // command
+  void new Swiper('.command__swiper', {
+    modules: [Pagination, Navigation, Autoplay],
+    grabCursor: true,
+    loop: true,
+    pagination: {
+      el: '.command__pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.command__navigation-next',
+      prevEl: '.command__navigation-prev',
+    },
+    autoplay: {
+      disableOnInteraction: true,
+    },
+  });
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

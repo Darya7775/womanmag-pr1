@@ -124,6 +124,24 @@
   font-weight: 700;
 }
 
+//all things
+
+@mixin title {
+  @include Raleway500;
+  font-size: 2.5em;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  color: black;
+}
+
+@mixin subtitle {
+  @include Raleway500;
+  font-size: 1.56em;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: black;
+}
+
 
 // Mobile first
 

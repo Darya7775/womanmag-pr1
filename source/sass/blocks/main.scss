@@ -1,23 +1,86 @@
 .main {
   width: 100%;
-  background-color: $color-default-white;
+
+  &::after {
+    content: "";
+    width: 44%;
+    height: 49.2rem;
+
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+
+    background-color: #f1eadc;
+  }
 }
 
 .main__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  padding-bottom: 3.38rem;
+  margin-bottom: 5rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 13%;
+    height: 49%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    right: 38%;
+
+    background-image: url("../img/content/main-foto-left.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include retina {
+      background-image: url("../img/content/main-foto-left@2x.jpg");
+    }
+
+    @include retina {
+      background-image: url("../img/content/main-foto-left@2x.webp");
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 13%;
+    height: 29%;
+    position: absolute;
+    z-index: 2;
+    top: 106px;
+    right: 6%;
+
+    background-image: url("../img/content/main-foto-right.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include retina {
+      background-image: url("../img/content/main-foto-right@2x.jpg");
+    }
+
+    @include retina {
+      background-image: url("../img/content/main-foto-right@2x.webp");
+    }
+  }
 }
 
 .main__list {
-  width: 34.56rem;
-
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 .main__item {
-  padding-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__item-wrap {
+  padding-top: 5rem;
+  width: 35rem;
 }
 
 .main__title {
@@ -30,7 +93,7 @@
 }
 
 .main__text {
-  width: 24.06rem;
+  width: 70%;
   margin: 0 0 3.25rem;
 
   font-size: 1.25em;
@@ -41,9 +104,12 @@
 
 .main__button {
   display: flex;
+  margin-left: 6rem;
+
+  height: 67px;
 }
 
-.main__button_scroll {
+.main__button-scroll {
   width: 67px;
   height: 67px;
 
@@ -61,7 +127,7 @@
   }
 }
 
-.main__button_open-mag {
+.main__button-open-mag {
   border: none;
   background-color: #6e9c9f;
   padding: 1.38rem 3.13rem;
@@ -76,9 +142,22 @@
   }
 }
 
+.main__wrap {
+  position: relative;
+}
+
+.main__wrap .main__pagination {
+  display: inline-flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform:translate(-25%, -50%);
+}
+
 .main__pagination .swiper-pagination-bullet {
   width: 30px;
   height: 4px;
+  border-radius: 0;
 
   background-color: #d1d1d1;
 }
@@ -87,12 +166,13 @@
   background-color: $color-default-black;
 }
 
-.main__wrap_img {
+.main__wrap-img {
   display: flex;
   justify-content: flex-end;
+  margin-right: 3px;
 }
 
 .main__img {
-
+  object-fit: cover;
 }
 

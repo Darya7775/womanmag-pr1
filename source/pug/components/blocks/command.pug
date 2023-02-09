@@ -1,0 +1,26 @@
+mixin command()
+  section.command
+    .container.command__container
+      h2.command__title Команда мечты Womazing
+      .command__wrapper
+        .swiper.command__swiper
+          ul.command__list.swiper-wrapper
+            li.command__item.swiper-slide
+              +picture("content", "command-1", "jpg", 729, 487, "фото команды").command__img
+            li.command__item.swiper-slide
+              +picture("content", "command-2", "jpg", 729, 487, "фото команды").command__img
+            li.command__item.swiper-slide
+              +picture("content", "command-3", "jpg", 729, 487, "фото команды").command__img
+          .command__pagination.swiper-pagination
+          .command__navigation-prev.swiper-button-prev
+          .command__navigation-next.swiper-button-next
+        .command__wrap
+          h3.command__title-wrap Для каждой
+          p.command__text
+            | Каждая девушка уникальна. Однако, мы&nbsp;схожи
+            | в&nbsp;миллионе мелочей.
+          p.command__text
+            | Womazing ищет эти мелочи и&nbsp;создает прекрасные
+            | вещи, которые выгодно подчеркивают достоинства каждой девушки.
+          a.command__link(href = "about.html") Подробнее о бренде
+

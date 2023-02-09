@@ -37,7 +37,6 @@
     position: absolute;
     left: 0;
     top: 25px;
-    z-index: -1;
     margin: 0;
     padding: 0 0.5rem;
     list-style: none;
@@ -47,19 +46,21 @@
     row-gap: 0.63rem;
 
     overflow-y: scroll;
-    height: 8rem;
+    height: 0;
     background-color: #f1eadc;
 
     &:focus-within {
-      z-index: 2;
+      height: 8rem;
     }
 }
 
 .main-nav__item--sublist:hover .main-nav__sublist{
+  height: 8rem;
   z-index: 2;
 }
 
 .main-nav__link--sublist:focus + .main-nav__sublist{
+  height: 8rem;
   z-index: 2;
 }
 
