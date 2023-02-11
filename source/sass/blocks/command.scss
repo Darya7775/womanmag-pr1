@@ -5,12 +5,21 @@
 .command__container {
   padding-top: 5rem;
   padding-bottom: 3rem;
+
+  @include vp-767 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 
-.command__title {
+.command__container h2 {
   @include title;
 
   margin: 0 0 5.75rem;
+
+  @include vp-767 {
+    margin: 0 0 2rem;
+  }
 }
 
 .command__wrapper {
@@ -18,12 +27,27 @@
   position: relative;
   justify-content: space-between;
   gap: 7.75rem;
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 1.7rem;
+  }
 }
 
 .command__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.command__swiper {
+  @include vp-767 {
+    width: 100%;
+  }
 }
 
 .command__swiper .swiper-pagination {
@@ -44,14 +68,31 @@
   background-color: #6e9c9f;
 }
 
-.command__title-wrap {
+.command__wrap {
+  @include vp-767 {
+    text-align: end;
+  }
+}
+
+.command__wrap h3 {
   @include subtitle;
 
   margin: 0 0 1.75rem;
+
+  @include vp-767 {
+    margin: 0 0 0.8rem;
+    text-align: start;
+  }
 }
 
-.command__text {
+.command__wrap p {
   margin: 0 0 1.75rem;
+
+  @include vp-767 {
+    margin: 0 0 0.7rem;
+    font-size: 0.88em;
+    text-align: start;
+  }
 }
 
 .command__link {
@@ -60,11 +101,15 @@
   @include hover {
     border-bottom: 1px solid #cededf;
   }
+
+  @include vp-767 {
+    font-size: 0.88em;
+  }
 }
 
 .command__img img {
   object-fit: cover;
-  width: 100%;
+  max-width: 100%;
 }
 
 .command__navigation-prev,

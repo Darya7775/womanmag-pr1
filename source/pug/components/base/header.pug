@@ -5,7 +5,11 @@ mixin header(headerMods, currentUrl)
         +logo().header__logo
       else
         +logo({href: "index.html"}).header__logo
-      +nav().header__nav
+      +nav({
+        nav: "header__nav",
+        list: "header__list",
+        item: "header__item",
+      })
       .header__wrapper
         div
           button.header__button(type="button", aria-label="Обратный звонок", data-open-modal="modal-1")
@@ -13,3 +17,7 @@ mixin header(headerMods, currentUrl)
             +icon("telephone", 17, 17)
           a.header__tel(href = "tel:+74958235412") +7 (495) 823-54-12
         a.header__basket(href = "basket.html", aria-label = "корзина")
+      button.header__accordion(data-state = "")
+        +icon("burger-header", 40, 30)
+        span.header__accordion-text.visually-hidden Открыть меню
+      .header__overlay

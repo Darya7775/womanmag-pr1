@@ -31,27 +31,35 @@
     @include Raleway700;
     color: #6e9c9f;
   }
+
+  @include vp-767 {
+    display: flex;
+  }
 }
 
 .main-nav__sublist {
-    position: absolute;
-    left: 0;
-    top: 25px;
-    margin: 0;
-    padding: 0 0.5rem;
-    list-style: none;
+  position: absolute;
+  left: 0;
+  top: 25px;
+  margin: 0;
+  padding: 0 0.5rem;
+  list-style: none;
 
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.63rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.63rem;
 
-    overflow-y: scroll;
-    height: 0;
-    background-color: #f1eadc;
+  overflow-y: scroll;
+  height: 0;
+  background-color: #f1eadc;
 
-    &:focus-within {
-      height: 8rem;
-    }
+  &:focus-within {
+    height: 8rem;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
 }
 
 .main-nav__item--sublist:hover .main-nav__sublist{

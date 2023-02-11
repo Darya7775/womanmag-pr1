@@ -1,16 +1,20 @@
 mixin footer(footerMods)
   footer.footer
     .container(class=footerMods)
-      .footer__wrapper
-        +logo().footer__logo
+      +logo().footer__logo
+      .footer__wrapper.footer__wrapper--grid
         div
           span © Все права защищены
           a(href = "#") Политика конфиденциальности
           a(href = "#") Публичная оферта
-      +nav().footer__nav
+      +nav({
+        nav: "footer__nav",
+        list: "footer__list",
+        item: "footer__item",
+      })
       .footer__wrapper
         a.footer__tel(href = "tel:+74958235412") +7 (495) 823-54-12
-        a.footer__email(href = "email: hello@womazing.com") hello@womazing.com
+        a.footer__email(href = "mailto:hello@womazing.com") hello@womazing.com
         +social({
           facebook: {width: 21, height: 21},
           instagram: {width: 22, height: 22},

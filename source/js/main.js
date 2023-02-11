@@ -35,6 +35,47 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+  // header
+  const breakpoint = window.matchMedia('(min-width:767px)');
+
+  const body = document.querySelector('body');
+  const header = document.querySelector('.header');
+  const headerButton = header.querySelector('.header__accordion');
+  const headerButtonText = header.querySelector('.header__accordion-text');
+  const headerNav = header.querySelector('.header__nav');
+  const overley = header.querySelector('.header__overlay');
+
+  const breakpointChecker = () => {
+    if (breakpoint.matches) {
+      headerNav.style.display = 'flex';
+    } else {
+      headerNav.style.display = 'none';
+    }
+  };
+
+  breakpoint.addEventListener('change', breakpointChecker);
+  breakpointChecker();
+
+  headerButton.addEventListener('click', () => {
+    if (headerButton.getAttribute('data-state') === 'active') {
+      headerButton.setAttribute('data-state', '');
+      headerNav.style.display = 'none';
+      headerButtonText.textContent = 'Открыть меню';
+      body.classList.remove('menu-opened');
+    } else {
+      headerButton.setAttribute('data-state', 'active');
+      headerNav.style.display = 'flex';
+      headerButtonText.textContent = 'Закрыть меню';
+      body.classList.add('menu-opened');
+    }
+  });
+
+  overley.addEventListener('click', () => {
+    headerButton.setAttribute('data-state', '');
+    headerNav.style.display = 'none';
+    headerButtonText.textContent = 'Открыть меню';
+    body.classList.remove('menu-opened');
+  });
   // main
   void new Swiper('.main__wrap', {
     modules: [Pagination, Autoplay],
@@ -43,9 +84,8 @@ window.addEventListener('DOMContentLoaded', () => {
       clickable: true,
     },
     autoplay: {
-      delay: 1000,
       stopOnLastSlide: true,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
     },
   });
 

@@ -12,6 +12,10 @@
     right: 0;
 
     background-color: #f1eadc;
+
+    @include vp-767{
+      height: 17.2%;
+    }
   }
 }
 
@@ -41,6 +45,10 @@
     @include retina {
       background-image: url("../img/content/main-foto-left@2x.webp");
     }
+
+    @include vp-767 {
+      display: none;
+    }
   }
 
   &::before {
@@ -64,6 +72,15 @@
     @include retina {
       background-image: url("../img/content/main-foto-right@2x.webp");
     }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  @include vp-767 {
+    padding-bottom: 0;
+    margin-bottom: 3rem;
   }
 }
 
@@ -76,23 +93,37 @@
 .main__item {
   display: flex;
   justify-content: space-between;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
 }
 
 .main__item-wrap {
   padding-top: 5rem;
   width: 35rem;
+
+  @include vp-767 {
+    width: 100%;
+    padding-top: 2rem;
+  }
 }
 
-.main__title {
+.main__item-wrap h2 {
   @include Raleway500;
   font-size: 3.44em;
   line-height: 110%;
   letter-spacing: 0.02em;
 
   margin: 0 0 2.81rem;
+
+  @include vp-767 {
+    font-size: 1.8em;
+    margin: 0 0 2rem;
+  }
 }
 
-.main__text {
+.main__item-wrap p {
   width: 70%;
   margin: 0 0 3.25rem;
 
@@ -100,6 +131,13 @@
   line-height: 140%;
   text-align: right;
   letter-spacing: 0.02em;
+
+  @include vp-767 {
+    width: 100%;
+    font-size: 1em;
+    line-height: 140%;
+    margin: 0 0 1.75rem;
+  }
 }
 
 .main__button {
@@ -107,9 +145,16 @@
   margin-left: 6rem;
 
   height: 67px;
+
+  @include vp-767 {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
 }
 
 .main__button-scroll {
+  display: block;
   width: 67px;
   height: 67px;
 
@@ -128,17 +173,26 @@
 }
 
 .main__button-open-mag {
+  display: block;
   border: none;
   background-color: #6e9c9f;
   padding: 1.38rem 3.13rem;
 
   color: $color-default-white;
+  text-align: center;
 
   cursor: pointer;
   user-select: none;
 
   @include hover {
     opacity: 0.6;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-left: 0;
+    padding: 1.38rem 1rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -152,6 +206,11 @@
   bottom: 0;
   left: 50%;
   transform:translate(-25%, -50%);
+
+  @include vp-767 {
+    bottom: 98%;
+    transform:translate(-20%, -100%);
+  }
 }
 
 .main__pagination .swiper-pagination-bullet {
@@ -170,9 +229,9 @@
   display: flex;
   justify-content: flex-end;
   margin-right: 3px;
-}
 
-.main__img {
-  object-fit: cover;
+  @include vp-767 {
+    width: 100%;
+    justify-content: center;
+  }
 }
-

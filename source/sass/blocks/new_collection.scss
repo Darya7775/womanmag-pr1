@@ -4,6 +4,7 @@
 
 .collection__container {
   padding-top: 1.13rem;
+  margin-bottom: 1rem;
 
   display: flex;
   flex-direction: column;
@@ -13,6 +14,10 @@
 .collection__title {
   @include title;
   margin: 0 0 5.75rem;
+
+  @include vp-767 {
+    margin: 0 0 1.3rem;
+  }
 }
 
 .collection__list {
@@ -25,6 +30,11 @@
   gap: 1.88rem;
 
   margin-bottom: 4.06rem;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
 }
 
 .collection__wrap {
@@ -61,7 +71,7 @@
   }
 }
 
-.collection__item-title {
+.collection__item h3 {
   @include Raleway500;
   font-size: 1.25em;
   line-height: 140%;
@@ -71,7 +81,7 @@
   margin: 0 0 0.44rem;
 }
 
-.collection__price {
+.collection__item span {
   @include Raleway500;
   font-size: 0.94em;
   line-height: 140%;
@@ -88,16 +98,16 @@
   padding: 1.38rem 3.13rem;
 
   align-self: center;
+  justify-content: center;
 
-  @include hover {
+  @include hover-focus {
     border: 1px solid #6e9c9f;
     background-color: #6e9c9f;
     color: #ffffff;
   }
 
-  @include focus {
-    border: 1px solid #6e9c9f;
-    background-color: #6e9c9f;
-    color: #ffffff;
+  @include vp-767 {
+    width: 100%;
+    padding: 1rem;
   }
 }

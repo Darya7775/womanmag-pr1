@@ -58,6 +58,10 @@ body {
   }
 }
 
+.menu-opened {
+  overflow: hidden;
+}
+
 a {
   color: $color-default-black;
   text-decoration: none;

@@ -4,5 +4,7 @@ mixin logo(options = {})
   - const href = options.href || false;
 
   #{tag}.logo(href=href, aria-label=aria)&attributes(attributes)
-    img.logo__img(src="img/svg/logo.svg", alt="логотип", width=139, height=25)
+    picture
+      source(media = "(max-width: 767px)", srcset = "img/svg/logo-mobile.svg")
+      img.logo__img(src="img/svg/logo.svg", alt="логотип", width=139, height=25)
 
