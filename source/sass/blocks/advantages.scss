@@ -6,7 +6,7 @@
   padding-top: 3rem;
   padding-bottom: 2rem;
 
-  @include vp-767 {
+  @include vp-1279 {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
@@ -16,6 +16,10 @@
   @include title;
 
   margin: 0 0 5.75rem;
+
+  @include vp-1279 {
+    margin: 0 0 3rem;
+  }
 
   @include vp-767 {
     margin: 0 0 2rem;
@@ -30,6 +34,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 4.69rem;
+
+  @include vp-1279 {
+    gap: 2.5rem;
+  }
 
   @include vp-767 {
     grid-template-columns: 1fr;
@@ -51,10 +59,19 @@
     background-repeat: no-repeat;
     background-size: 100%;
 
+    @include vp-1279 {
+      width: 50px;
+      height: 50px;
+    }
+
     @include vp-767 {
       width: 40px;
       height: 40px;
     }
+  }
+
+  @include vp-1279 {
+    padding-top: 3.6rem;
   }
 
   @include vp-767 {
@@ -85,6 +102,10 @@
 
   margin: 0 0 1.5rem;
 
+  @include vp-1279 {
+    margin: 0 0 1rem;
+  }
+
   @include vp-767 {
     margin: 0 0 0.5rem;
   }
@@ -92,6 +113,12 @@
 
 .advantages__item p {
   margin: 0;
+  font-size: 1.25em;
+  line-height: 140%;
+
+  @include vp-1279 {
+    font-size: 0.94em
+  }
 
   @include vp-767 {
     font-size: 0.88em;

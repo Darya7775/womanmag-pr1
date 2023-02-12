@@ -1,11 +1,24 @@
+.main-nav {
+  width: 48%;
+
+  @include vp-1279 {
+    width: 42.2%;
+  }
+
+  @include vp-767 {
+    width: 80%;
+  }
+}
+
 .main-nav__list {
   margin: 0;
   padding: 0;
   list-style: none;
 
-  width: 25rem;
+  width: 100%;
 
   @include Raleway400;
+  font-size: 1.25em;
   line-height: 140%;
   letter-spacing: 0.02em;
   color: $color-default-black;
@@ -13,7 +26,15 @@
   display: flex;
   flex-wrap: wrap;
   column-gap: 2.81rem;
-  row-gap: 1.5rem;
+  row-gap: 1rem;
+
+  @include vp-1439 {
+    font-size: 0.83rem;
+  }
+
+  @include vp-1279 {
+    column-gap: 5.7%;
+  }
 }
 
 .main-nav__item {
@@ -21,8 +42,6 @@
 }
 
 .main-nav__link {
-  font-size: 0.94em;
-
   @include hover {
     opacity: 0.6;
   }
@@ -40,7 +59,7 @@
 .main-nav__sublist {
   position: absolute;
   left: 0;
-  top: 25px;
+  top: 30px;
   margin: 0;
   padding: 0 0.5rem;
   list-style: none;
@@ -57,6 +76,18 @@
     height: 8rem;
   }
 
+  @include vp-1439 {
+    top: 20px;
+  }
+
+  @include vp-1279 {
+    row-gap: 0.1rem;
+
+    &:focus-within {
+      height: 6rem;
+    }
+  }
+
   @include vp-767 {
     display: none;
   }
@@ -65,11 +96,19 @@
 .main-nav__item--sublist:hover .main-nav__sublist{
   height: 8rem;
   z-index: 2;
+
+  @include vp-1279 {
+    height: 6rem;
+  }
 }
 
 .main-nav__link--sublist:focus + .main-nav__sublist{
   height: 8rem;
   z-index: 2;
+
+  @include vp-1279 {
+    height: 6rem;
+  }
 }
 
 .main-nav__sublink {
@@ -77,6 +116,10 @@
 
   @include hover {
     opacity: 0.7;
+  }
+
+  @include vp-1279 {
+    font-size: 0.75em;
   }
 }
 
