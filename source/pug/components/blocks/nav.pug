@@ -2,14 +2,14 @@ mixin nav(options = {})
   nav.main-nav(class = options.nav)&attributes(attributes)
     ul.main-nav__list(class = options.list)
       li.main-nav__item(class = options.item)
-        a.main-nav__link(href = "index.html") Главная
+        a.main-nav__link(href = "index.html", class=(options.name === "index" ? "main-nav__link--active" : undefined)) Главная
       li.main-nav__item.main-nav__item--sublist(class = options.item)
-        a.main-nav__link.main-nav__link--sublist(href = "shop.html") Магазин
+        a.main-nav__link.main-nav__link--sublist(href = "shop.html", class=(options.name === "shop" ? "main-nav__link--active" : undefined)) Магазин
         ul.main-nav__sublist
           each one in typesOfClothing
             li.main-nav__subitem
               a.main-nav__sublink(href = "#")=one
       li.main-nav__item(class = options.item)
-        a.main-nav__link(href = "about.html", ) О бренде
+        a.main-nav__link(href = "about.html", class=(options.name === "about" ? "main-nav__link--active" : undefined)) О бренде
       li.main-nav__item(class = options.item)
-        a.main-nav__link(href = "contacts.html") Контакты
+        a.main-nav__link(href = "contacts.html", class=(options.name === "contacts" ? "main-nav__link--active" : undefined)) Контакты

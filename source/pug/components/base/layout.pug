@@ -32,12 +32,12 @@ html(lang="ru")
     +sprite()
     .wrapper(class=wrapperMods)
       if (hasHeader)
-        +header(headerMods, currentUrl)
+        +header(headerMods, currentUrl, name)
 
       block main
 
       if (hasFooter)
-        +footer(footerMods)
+        +footer(footerMods, name)
 
     block modals
 

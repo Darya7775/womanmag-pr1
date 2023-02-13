@@ -1,4 +1,4 @@
-mixin footer(footerMods)
+mixin footer(footerMods, name)
   footer.footer
     .container(class=footerMods)
       +logo().footer__logo
@@ -11,6 +11,7 @@ mixin footer(footerMods)
         nav: "footer__nav",
         list: "footer__list",
         item: "footer__item",
+        name: name,
       })
       .footer__wrapper
         a.footer__tel(href = "tel:+74958235412") +7 (495) 823-54-12

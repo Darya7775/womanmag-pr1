@@ -7,7 +7,7 @@
 // import {initMoveTo} from './modules/init-move-to';
 // import {initNavbarMenu} from './modules/init-navbar-menu';
 // import {initHeaderObserver} from './modules/init-header-observer';
-// import {initTabs} from './modules/init-tabs';
+import {initTabs} from './modules/init-tabs';
 // import {initNavigationChanger} from './modules/init-navigation-changer';
 // import {initArticleMenu} from './modules/init-article-menu';
 // import {initChangeNumber} from './modules/init-change-number';
@@ -119,6 +119,17 @@ window.addEventListener('DOMContentLoaded', () => {
       disableOnInteraction: true,
     },
   });
+  // shop
+  const shopTabs = document.querySelectorAll('.shop__button');
+
+  shopTabs.forEach((link) => {
+    link.addEventListener('click', () => {
+      for (let i = 0; i < shopTabs.length; i++) {
+        shopTabs[i].classList.remove('shop__button--active');
+      }
+      link.classList.add('shop__button--active');
+    });
+  });
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
@@ -128,7 +139,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // initUpButton();
     // initMoveTo();
     // initNavbarMenu();
-    // initTabs();
+    initTabs();
     // initNavigationChanger();
     // initArticleMenu();
     // initChangeNumber();

@@ -1,0 +1,267 @@
+.shop {
+  width: 100%;
+}
+
+.shop__container {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+
+  @include vp-1279 {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+
+  @include vp-767 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+.shop__container h2 {
+  @include majorTitle;
+
+  margin: 0 0 1.75rem;
+
+  @include vp-1279 {
+    margin: 0 0 1.25rem;
+  }
+
+  @include vp-767 {
+    margin: 0 0 0.75rem;
+  }
+}
+
+.shop__bread-crumbs {
+  margin: 0 0 6.25rem;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  column-gap: 1rem;
+
+  @include vp-1279 {
+    font-size: 0.88em;
+    margin: 0 0 3.25rem;
+  }
+
+  @include vp-767 {
+    margin: 0 0 1.25rem;
+  }
+}
+
+.shop__wrap span {
+  display: block;
+  margin-bottom: 3rem;
+
+  @include vp-1279 {
+    margin-bottom: 2rem;
+  }
+
+  @include vp-767 {
+    margin-bottom: 1rem;
+  }
+}
+
+.shop__list-buttons {
+  display: flex;
+  column-gap: 0.63rem;
+  row-gap: 1rem;
+
+  margin-bottom: 5.63rem;
+
+  @include vp-767 {
+    flex-direction: column;
+    margin-bottom: 1.63rem;
+  }
+}
+
+.shop__button {
+  width: 100%;
+  border: 1px solid $color-default-black;
+  background-color: $color-default-white;
+  color: $color-default-black;
+  padding: 1.19rem;
+
+  cursor: pointer;
+  user-select: none;
+
+  &--active {
+    background-color: $color-default-black;
+    border: 1px solid $color-default-black;
+    color: $color-default-white;
+
+    @include hover-focus {
+      transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+    }
+  }
+
+  @include hover-focus {
+    opacity: 0.6;
+  }
+
+  @include vp-767 {
+    font-size: 0.88em;
+    padding: 0.8rem;
+  }
+}
+
+.shop__list-products {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.88rem;
+
+  @include vp-1279 {
+    flex-direction: column;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.shop__item h3 {
+  @include Raleway500;
+  font-size: 2em;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  text-align: center;
+
+  margin: 0 0 0.44rem;
+
+  @include vp-1759 {
+    font-size: 1.25em;
+    line-height: 140%;
+  }
+}
+
+.shop__item span {
+  @include Raleway500;
+  font-size: 1.4em;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #998e78;
+
+  display: block;
+  text-align: center;
+
+  @include vp-1759 {
+    font-size: 0.94em;
+  }
+}
+
+.shop__item-wrap {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.shop__item-wrap img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.shop__link-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(110, 156, 159, 0.64);
+  background-image: url("../img/svg/collection-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  opacity: 0;
+
+  @include hover {
+    opacity: 1;
+  }
+
+  @include focus {
+    opacity: 1;
+  }
+}
+
+.shop__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.88rem;
+}
+
+.shop__pagination-button {
+  border: 1px solid $color-default-black;
+  background-color: $color-default-white;
+  color: $color-default-black;
+  padding: 0.2rem 0.5rem;
+
+  cursor: pointer;
+  user-select: none;
+
+  &--active {
+    background-color: $color-default-black;
+    border: 1px solid $color-default-black;
+    color: $color-default-white;
+  }
+
+  @include hover-focus {
+    opacity: 0.6;
+  }
+}
+
+.shop__pagination-button--next {
+  border: none;
+  background-image: url("../img/svg/arrow-pagination.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding: 0;
+  width: 15px;
+}
+
+
+// tabs
+[data-tabs="parent"] {
+  overflow: hidden;
+
+  &.no-transition {
+    > [data-tabs="control"],
+    > [data-tabs="content"],
+    > [data-tabs="element"] {
+      transition: none;
+    }
+  }
+
+  &.no-transition-global {
+    [data-tabs="control"],
+    [data-tabs="content"],
+    [data-tabs="element"] {
+      transition: none;
+    }
+  }
+}
+
+[data-tabs="parent"] [data-tabs="content"] {
+  position: relative;
+}
+
+[data-tabs="element"] {
+  position: absolute;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+}
+
+[data-tabs="element"].is-active {
+  z-index: 1;
+
+  visibility: visible;
+  opacity: 1;
+}

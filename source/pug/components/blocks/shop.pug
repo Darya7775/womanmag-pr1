@@ -1,0 +1,174 @@
+mixin shop()
+  section.shop
+    .container.shop__container
+      h2 Магазин
+      ul.shop__bread-crumbs.bread-crumbs
+        li.bread-crumbs__item
+          a.bread-crumbs__link(href = "index.html") Главная  -
+        li.bread-crumbs__item
+          a.bread-crumbs__link.bread-crumbs__link--active Магазин
+      .shop__wrap(data-tabs="parent")
+        .shop__list-buttons(data-tabs="controls")
+          button.shop__button.shop__button--active(data-tabs="control") Все
+          button.shop__button(data-tabs="control") Пальто
+          button.shop__button(data-tabs="control") Свитшоты
+          button.shop__button(data-tabs="control") Футболки
+          button.shop__button(data-tabs="control") Платья
+        span Показано: 9 из 12 товаров
+        .shop__list-contents(data-tabs="content")
+          ul.shop__list-products(data-tabs="element")
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-1", "jpg", 350, 478, "девушка в футболке")
+              h3 Футболка USA
+              span $129
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-2", "jpg", 350, 478, "девушка в купальнике")
+              h3 Купальник Glow
+              span $129
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-3", "jpg", 350, 478, "девушка в свитшоте")
+              h3 Свитшот Sweet Shot
+              span $129
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-4", "jpg", 350, 478, "девушка в футболке")
+              h3 Футболка The Trails
+              span $129
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-5", "jpg", 350, 478, "девушка в купальнике")
+              h3 Пальто бежевое
+              span $129
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-6", "jpg", 350, 478, "девушка в свитшоте")
+              h3 Сумочка BrownCase
+              span $129
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-7", "jpg", 350, 478, "девушка в футболке")
+              h3 Топик
+              span $129
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-8", "jpg", 350, 478, "девушка в купальнике")
+              h3 Кроссовки
+              span $129
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-9", "jpg", 350, 478, "девушка в свитшоте")
+              h3 Вечернее платье
+              span $129
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-10", "jpg", 350, 478, "девушка в футболке")
+              h3 Деловое платье
+              span $129
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-11", "jpg", 350, 478, "девушка в купальнике")
+              h3 Кожаная куртка
+              span $129
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-12", "jpg", 350, 478, "девушка в свитшоте")
+              h3 Джинсы Casual
+              span $129
+          ul.shop__list-products(data-tabs="element")
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-5", "jpg", 350, 478, "девушка в купальнике")
+              h3 Пальто бежевое
+              span $129
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-11", "jpg", 350, 478, "девушка в купальнике")
+              h3 Кожаная куртка
+              span $129
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-3", "jpg", 350, 478, "девушка в свитшоте")
+              h3 Свитшот Sweet Shot
+              span $129
+          ul.shop__list-products(data-tabs="element")
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-2", "jpg", 350, 478, "девушка в купальнике")
+              h3 Купальник Glow
+              span $129
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-8", "jpg", 350, 478, "девушка в купальнике")
+              h3 Кроссовки
+              span $129
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-12", "jpg", 350, 478, "девушка в свитшоте")
+              h3 Джинсы Casual
+              span $129
+          ul.shop__list-products(data-tabs="element")
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-1", "jpg", 350, 478, "девушка в футболке")
+              h3 Футболка USA
+              span $129
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-4", "jpg", 350, 478, "девушка в футболке")
+              h3 Футболка The Trails
+              span $129
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-7", "jpg", 350, 478, "девушка в футболке")
+              h3 Топик
+              span $129
+          ul.shop__list-products(data-tabs="element")
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-9", "jpg", 350, 478, "девушка в свитшоте")
+              h3 Вечернее платье
+              span $129
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-10", "jpg", 350, 478, "девушка в футболке")
+              h3 Деловое платье
+            li.shop__item
+              .shop__item-wrap
+                a.shop__link-img(href = "#")
+                +picture("content", "collection-6", "jpg", 350, 478, "девушка в свитшоте")
+              h3 Сумочка BrownCase
+              span $129
+        span Показано: 9 из 12 товаров
+      .shop__pagination
+        button.shop__pagination-button.shop__pagination-button--active 1
+        button.shop__pagination-button 2
+        button.shop__pagination-button.shop__pagination-button--next(aria-label = "следующая")
+
+
+

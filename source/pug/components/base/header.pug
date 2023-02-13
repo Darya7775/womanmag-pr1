@@ -1,4 +1,4 @@
-mixin header(headerMods, currentUrl)
+mixin header(headerMods, currentUrl, name)
   header.header
     .container(class=headerMods)
       if(currentUrl === "index.html")
@@ -9,6 +9,7 @@ mixin header(headerMods, currentUrl)
         nav: "header__nav",
         list: "header__list",
         item: "header__item",
+        name: name,
       })
       .header__wrapper
         div
