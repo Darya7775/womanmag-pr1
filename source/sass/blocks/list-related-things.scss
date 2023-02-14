@@ -1,0 +1,96 @@
+.list-related-things {
+  width: 100%;
+}
+
+.list-related-things__container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.list-related-things__container h2 {
+  @include title;
+
+  margin: 0 0 4.18rem;
+}
+
+.list-related-things__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.87rem;
+
+  @include vp-1279 {
+    flex-direction: column;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.list-related-things__item h3 {
+  @include Raleway500;
+  font-size: 2em;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  text-align: center;
+
+  margin: 0 0 0.44rem;
+
+  @include vp-1759 {
+    font-size: 1.25em;
+    line-height: 140%;
+  }
+}
+
+.list-related-things__item span {
+  @include Raleway500;
+  font-size: 1.4em;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #998e78;
+
+  display: block;
+  text-align: center;
+
+  @include vp-1759 {
+    font-size: 0.94em;
+  }
+}
+
+.list-related-things__item-wrap {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.list-related-things__link-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(110, 156, 159, 0.64);
+  background-image: url("../img/svg/collection-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  opacity: 0;
+
+  @include hover {
+    opacity: 1;
+  }
+
+  @include focus {
+    opacity: 1;
+  }
+}
+
+.list-related-things__item-wrap img {
+  width: 100%;
+  object-fit: cover;
+}

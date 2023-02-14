@@ -1,0 +1,132 @@
+.about {
+  width: 100%;
+}
+
+.about__container {
+  padding-top: 6.5rem;
+  padding-bottom: 6.5rem;
+
+  display: grid;
+  gap: 4rem;
+
+  @include vp-767 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 2rem;
+  }
+}
+
+.about__container h2 {
+  @include majorTitle;
+
+  margin: 0 0 4.5rem;
+
+  @include vp-767 {
+    margin: 0 0 2rem;
+  }
+}
+
+.about__wrapper {
+  display: flex;
+  gap: 6rem;
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+.about__wrapper img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.about__wrapper-text {
+  width: 50%;
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.about__wrapper-text h3 {
+  @include Raleway500;
+  font-size: 1.56em;line-height: 140%;
+  letter-spacing: 0.02em;
+
+  margin: 0 0 2.87rem;
+
+  @include vp-767 {
+    margin: 0 0 1.5rem;
+  }
+}
+
+.about__wrapper-text p {
+  margin: 0 0 1rem;
+}
+
+.about__button-text {
+  display: none;
+
+  @include vp-1279 {
+    display: block;
+    border: 1px solid #6e9c9f;
+    background-color: #ffffff;
+    color: #6e9c9f;
+    padding: 0.5rem 3rem;
+
+    cursor: pointer;
+    user-select: none;
+
+    @include hover-focus {
+      border: 1px solid #6e9c9f;
+      background-color: #6e9c9f;
+      color: #ffffff;
+    }
+  }
+}
+
+.about__link {
+  width: 30%;
+  border: 1px solid #6e9c9f;
+  background-color: #6e9c9f;
+  color: #ffffff;
+  padding: 1.3rem 3rem;
+  text-align: center;
+  align-self: center;
+
+  cursor: pointer;
+  user-select: none;
+
+  justify-self: center;
+
+  @include hover-focus {
+    border: 1px solid #6e9c9f;
+    background-color: #ffffff;
+    color: #6e9c9f;
+  }
+
+  @include vp-1279 {
+    width: 40%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+
+//accordion
+[data-accordion="element"].is-active > [data-accordion="content"] {
+  max-height: 100%;
+}
+
+[data-accordion="parent"].no-transition [data-accordion="content"] {
+  transition: none;
+}
+
+[data-accordion="content"] {
+  max-height: 0;
+  transition: max-height 0.3s;
+  overflow: hidden;
+}

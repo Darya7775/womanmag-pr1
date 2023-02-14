@@ -1,0 +1,44 @@
+mixin about()
+  section.about
+    .container.about__container
+      h2 О бренде
+      .about__wrapper(data-accordion="parent", data-destroy="(max-width: 1279px)")
+        +picture("content", "about-1", "jpg", 442, 547, "девушка в джинсах и красном топике сидит на горе, которая находится над городом")
+        .about__wrapper-text(data-accordion="element")
+          h3 Идея и&nbsp;женщина
+          p
+           |Womazing была основана в&nbsp;2010-ом и&nbsp;стала
+           |одной из&nbsp;самых успешных компаний нашей страны.
+           |Как и&nbsp;многие итальянские фирмы, Womazing остаётся
+           |семейной компанией, хотя ни&nbsp;один из&nbsp;членов
+           |семьи не&nbsp;является модельером.
+          button.about__button-text(type="button", data-accordion="button") Показать больше
+          .about__wrapper-text-more(data-accordion="content")
+            p
+            |Мы&nbsp;действуем по&nbsp;успешной формуле, прибегая
+            |к&nbsp;услугам известных модельеров для создания своих
+            |коллекций. Этот метод был описан критиком моды Колином
+            |Макдауэллом как форма дизайнерского со-творчества,
+            |характерная для ряда итальянских pr&ecirc;t-a-porter
+            |компаний.
+      .about__wrapper(data-accordion="parent", data-destroy="(max-width: 1279px)")
+        .about__wrapper-text(data-accordion="element")
+          h3 Магия в&nbsp;деталях
+          p
+           |Первый магазин Womazing был открыт в&nbsp;маленьком
+           |городке на&nbsp;севере страны в&nbsp;2010-ом году.
+           |Первая коллекция состояла из&nbsp;двух пальто и&nbsp;костюма,
+           |которые были копиями парижских моделей.
+          button.about__button-text(type="button", data-accordion="button") Показать больше
+          .about__wrapper-text-more(data-accordion="content")
+            p
+            |Несмотря на&nbsp;то, что по&nbsp;образованию основательница
+            |была адвокатом, ее&nbsp;семья всегда была тесно связана с&nbsp;шитьём
+            |(прабабушка основательницы шила одежду для женщин, а&nbsp;мать
+            |основала профессиональную школу кроя и&nbsp;шитья). Стремление
+            |производить одежду для масс несло в&nbsp;себе большие перспективы,
+            |особенно в&nbsp;то&nbsp;время, когда высокая мода по-прежнему
+            |доминировала, а&nbsp;рынка качественного pr&ecirc;t-a-porter
+            |попросту не&nbsp;существовало.
+        +picture("content", "about-2", "jpg", 442, 547, altText)
+      a.about__link(href = "shop.html") Перейти в магазин

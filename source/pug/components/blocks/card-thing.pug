@@ -1,0 +1,48 @@
+mixin card-thing(options = {})
+  section.card-thing
+    .container.card-thing__container
+      h2=options.name
+      .card-thing__content-wrapper
+        +picture("content", options.img, "jpg", 350, 478, options.alt)
+        .card-thing__wrapper
+          .card-thing__price
+            .card-thing__price-new
+              span(aria-label="новая цена")=options.newPrice
+            .card-thing__price-old
+              span(aria-label="старая цена")=options.oldPrice
+          form.card-thing__form(action="https://echo.htmlacademy.ru", method="post")
+            .card-thing__size
+              p Выберите размер
+              input(type="radio", id="S", name="size", value="S", placholder="S")
+              label(for="S") S
+
+              input(type="radio", id="M", name="size", value="M", placholder="M", checked)
+              label(for="M") M
+
+              input(type="radio", id="L", name="size", value="L", placholder="L")
+              label(for="L") L
+
+              input(type="radio", id="XL", name="size", value="XL", placholder="XL")
+              label(for="XL") XL
+
+              input(type="radio", id="XXL", name="size", value="XXL", placholder="XXL")
+              label(for="XXL") XXL
+            .card-thing__color
+              p Выберите цвет
+
+              input(type="radio", id="brown", name="color", value="brown", placholder="brown")
+              label.card-thing__color--brown(for="brown", aria-label="коричневый")
+
+              input(type="radio", id="grey", name="color", value="grey", placholder="grey", checked)
+              label.card-thing__color--grey(for="grey", aria-label="серый")
+
+              input(type="radio", id="pink", name="color", value="pink", placholder="pink")
+              label.card-thing__color--pink(for="pink", aria-label="розовый")
+
+              input(type="radio", id="yellow", name="color", value="yellow", placholder="yellow")
+              label.card-thing__color--yellow(for="yellow", aria-label="желтый")
+            .card-thing__wrap-buttons
+              .card-thing__quantity
+                label.visually-hidden(for="quantity", aria-label="количество товаров") количество
+                input(type="number", id="quantity", name="quantity", placholder="1", value="1" required)
+              button.card-thing__form-submit(type="submit") Добавить в корзину

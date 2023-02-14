@@ -1,0 +1,35 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "WOMAZING" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = "header__container"
+  - const hasFooter = true
+  - const footerMods = "footer__container"
+  - const name = "card-thing-swimsuit"
+  - const currentUrl = "card-thing-swimsuit.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const typesOfClothing = ["Пальто", "Свитшоты", "Футболки", "Платья"]
+
+block main
+  main
+  +card-thing({
+    name: "Купальник Glow",
+    img: "collection-2",
+    alt: "девушка в купальнике",
+    newPrice: "$150",
+    oldPrice: "$180",
+  })
+  +list-related-things({
+    name1: "Кроссовки",
+    price1: "$129",
+    img1: "collection-8",
+    alt1: "девушка в кроссовках",
+    name2: "Джинсы Casual",
+    price2: "$129",
+    img2: "collection-12",
+    alt2: "девушка в джинсах",
+  })
+
+
+block modals

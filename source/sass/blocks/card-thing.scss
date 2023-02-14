@@ -1,0 +1,201 @@
+.card-thing {
+  width: 100%;
+}
+
+.card-thing__container {
+  padding-top: 4.38rem;
+  padding-bottom: 4.38rem;
+
+  @include vp-767 {
+    padding-top: 2.38rem;
+    padding-bottom: 2.38rem;
+  }
+}
+
+.card-thing__container h2 {
+  @include majorTitle;
+
+  margin: 0 0 1.63rem;
+}
+
+.card-thing__content-wrapper {
+  display: flex;
+  column-gap: 4.63rem;
+
+  @include vp-767 {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+}
+
+.card-thing__wrapper {
+  align-self: center;
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.card-thing__price {
+  @include Raleway500;
+
+  display: flex;
+  column-gap: 1.81rem;
+
+  margin-bottom: 3.44rem;
+
+  @include vp-767 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.card-thing__price-new {
+  font-size: 2.5em;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  color: #998e78;
+}
+
+.card-thing__price-old span {
+  font-size: 1.88em;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  color: #9c9c9c;
+  text-decoration: line-through;
+}
+
+.card-thing__form {
+  display: grid;
+  gap: 3.44rem;
+
+  @include vp-767 {
+    gap: 1rem;
+  }
+}
+
+.card-thing__form p {
+  @include Raleway500;
+  font-size: 1.25em;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+
+  margin: 0 0 2.12rem;
+}
+
+input[type="radio"] {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.card-thing__size label {
+  border: 1px solid #000000;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 41px;
+  height: 41px;
+  padding: 2px 5px;
+
+  cursor: pointer;
+  user-select: none;
+
+  @include hover-focus {
+    opacity: 0.7;
+  }
+}
+
+.card-thing__size input:checked + label {
+  border: 1px solid #000000;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.card-thing__color label {
+  display: inline-flex;
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+
+  cursor: pointer;
+  user-select: none;
+
+  @include hover-focus {
+    opacity: 0.7;
+  }
+}
+
+.card-thing__color--brown {
+  background-color: #927876;
+}
+
+.card-thing__color--grey {
+  background-color: #d4d4d4;
+}
+
+.card-thing__color--pink {
+  background-color: #fd9696;
+}
+
+.card-thing__color--yellow {
+  background-color: #fdc796;
+}
+
+.card-thing__color input:checked + label {
+ outline: 1px solid #000000;
+}
+
+.card-thing__wrap-buttons {
+  display: flex;
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.card-thing__quantity input {
+  border: 1px solid #afafaf;
+  width: 68px;
+  height: 68px;
+
+  @include Raleway400;
+  font-size: 1.25em;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+
+  text-align: center;
+}
+
+.card-thing__form-submit {
+  width: 100%;
+  border: none;
+  background-color: #6e9c9f;
+  color: #ffffff;
+
+  padding: 0 2.5rem;
+
+  cursor: pointer;
+  user-select: none;
+
+  @include vp-767 {
+    width: 100%;
+  }
+
+  @include hover-focus {
+    background-color: #ffffff;
+    color: #6e9c9f;
+    outline: 1px solid #6e9c9f;
+  }
+}

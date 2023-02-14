@@ -1,0 +1,17 @@
+mixin list-related-things(options = {})
+  section.list-related-things
+    .container.list-related-things__container
+      h2 Связанные товары
+      ul.list-related-things__list
+        li.list-related-things__item
+          .list-related-things__item-wrap
+            a.list-related-things__link-img(href = "#")
+            +picture("content", options.img1, "jpg", 350, 478, options.alt1)
+          h3=options.name1
+          span=options.price1
+        li.list-related-things__item
+          .list-related-things__item-wrap
+            a.list-related-things__link-img(href = "#")
+            +picture("content", options.img2, "jpg", 350, 478, options.alt2)
+          h3=options.name2
+          span=options.price2

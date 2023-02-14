@@ -2,7 +2,7 @@
 // import {initSandwichMenu} from './modules/init-sandwich-menu';
 // import {ScrollLock} from './utils/scroll-lock';
 // import {initDynamicAdaptive} from './modules/init-dynamic-adaptive';
-// import {initAccordions} from './modules/init-accordion';
+import {initAccordions} from './modules/init-accordion';
 // import {initUpButton} from './modules/init-up-button';
 // import {initMoveTo} from './modules/init-move-to';
 // import {initNavbarMenu} from './modules/init-navbar-menu';
@@ -135,7 +135,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     // initSandwichMenu();
-    // initAccordions();
+    initAccordions();
     // initUpButton();
     // initMoveTo();
     // initNavbarMenu();
