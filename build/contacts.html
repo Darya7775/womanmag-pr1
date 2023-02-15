@@ -104,7 +104,48 @@
           <div class="header__overlay"></div>
         </div>
       </header>
-      <main></main>
+      <main>
+        <section class="contact">
+          <div class="container contact__container">
+            <h2>Контакты</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.054019370537!2d37.52989311560455!3d55.68804858053612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf681cd88db%3A0x2a3fadda3df86f1b!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDI1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1676438995190!5m2!1sru!2sru" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="contact__wrapper">
+              <div><span class="contact__text">Телефон</span><a class="contact__link" href="tel:+74958235412" aria-label="телефон для связи с магазином Womazing">+7 (495) 823-54-12</a></div>
+              <div><span class="contact__text">E-mail</span><a class="contact__link" href="mailto:info@sitename.com" aria-label="электронная почта для связи с магазином Womazing">info@sitename.com</a></div>
+              <div><span class="contact__text">Адрес</span>
+                <address class="contact__link" aria-label="адрес, по которому находится магазин Womazing">г. Москва, 3-я улица Строителей, 25</address>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="contacts-form">
+          <div class="container contacts-form__container">
+            <h3>Напишите нам</h3>
+            <div class="contacts-form__wrapper" data-form-validate data-callback="base">
+              <form class="contacts-form__form" action="https://echo.htmlacademy.ru" method="post">
+                <div class="contacts-form__name" data-required data-limitation="cyrillic" data-validate-type="text" data-message-base="Поле обязательно к заполнению">
+                  <label for="name"></label>
+                  <input type="text" id="name" name="name" placeholder="Имя" required>
+                </div>
+                <div class="contacts-form__email" data-required data-validate-type="email" data-message-base="Поле обязательно к заполнению">
+                  <label for="e-mail"></label>
+                  <input type="email" id="e-mail" name="e-mail" placeholder="E-mail" required>
+                </div>
+                <div class="contacts-form__tel" data-required data-validate-type="phone" data-message-base="Поле обязательно к заполнению">
+                  <label for="tel"></label>
+                  <input type="tel" id="tel" name="tel" placeholder="Телефон" required>
+                </div>
+                <textarea name="messang" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                <div class="contacts-form__checkbox" data-required data-validate-type="checkbox" data-message-base="Необходимо Ваше согласие!">
+                  <input type="checkbox" name="consentToDataProcessing" id="consent" required>
+                  <label for="consent">Я согласен на обработку моих персональных данных</label>
+                </div>
+                <button class="contacts-form__button" type="submit" aria-label="Отправить cообщение">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
       <footer class="footer">
         <div class="container footer__container">
           <span class="logo footer__logo">
@@ -148,6 +189,12 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div class="modal" data-modal="modal-3" id="modal-3">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__succes"><span class="modal__text">Сообщение успешно отправлено</span>
+        <button class="form___submit" type="button" data-close-modal>Закрыть</button>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

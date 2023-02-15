@@ -1,0 +1,167 @@
+.contacts-form {
+  width: 100%;
+}
+
+.contacts-form__container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.contacts-form__container h3 {
+  @include subtitle;
+
+  margin: 0 0 3rem;
+}
+
+.contacts-form__form {
+  display: grid;
+  gap: 1rem;
+}
+
+.contacts-form__form textarea {
+  width: 50%;
+  padding: 1rem;
+  border: none;
+  border-bottom: 2px solid #000000;
+
+  @include vp-1279 {
+    width: 80%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.contacts-form__form input {
+  border: none;
+  border-bottom: 2px solid #000000;
+  display: block;
+
+  padding: 0.3rem 0.3rem 1rem;
+
+  &::placeholder {
+    @include Raleway500;
+    font-size: 1.06em;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #868686;
+  }
+
+  @include vp-1279 {
+    width: 40%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.contacts-form__button {
+  @include Raleway400;
+  font-size: 1.06em;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: $color-default-white;
+
+  border: none;
+  background-color: #6e9c9f;
+  padding: 1.38rem 0;
+
+  width: 20%;
+
+  cursor: pointer;
+  user-select: none;
+
+  @include hover {
+    opacity: 0.6;
+  }
+
+  @include vp-1279 {
+    width: 40%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.contacts-form__checkbox input {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.contacts-form__checkbox label {
+  position: relative;
+  padding-left: 30px;
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border: 2px solid #6e9c9f;
+  }
+}
+
+.contacts-form__checkbox input:checked + label::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+
+  background-color:#6e9c9f;
+}
+
+.is-invalid {
+  input {
+    border-bottom: 2px solid #ff1553;
+
+    &:focus,
+    &:hover {
+      border-bottom: 2px solid rgba(#ff1553, 0.5);
+    }
+  }
+}
+
+.is-valid {
+  input {
+    border-bottom: 2px solid #22b259;
+
+    &:focus,
+    &:hover {
+      border-bottom: 2px solid rgba(#22b259, 0.5);
+    }
+  }
+}
+
+.input-message {
+  position: absolute;
+  right: 0;
+  bottom: -25px;
+
+  &.is-invalid {
+    color: #ff0000;
+  }
+
+  &.is-valid {
+    color: #15ab07;
+  }
+}

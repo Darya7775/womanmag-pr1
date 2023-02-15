@@ -1,0 +1,74 @@
+.contact {
+  width: 100%;
+}
+
+.contact__container {
+  padding-top: 6.44rem;
+  padding-bottom: 5.44rem;
+
+  @include vp-1279 {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+
+  @include vp-767 {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.contact__container h2 {
+  @include majorTitle;
+
+  margin: 0 0 6.44rem;
+
+  @include vp-1279 {
+    margin: 0 0 4rem;
+  }
+
+  @include vp-767 {
+    margin: 0 0 2rem;
+  }
+}
+
+.contact__container iframe {
+  width: 100%;
+  margin-bottom: 6rem;
+
+  @include vp-1279 {
+    margin-bottom: 4rem;
+  }
+
+  @include vp-767 {
+    margin-bottom: 2rem;
+  }
+}
+
+.contact__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact__text {
+  @include Raleway500;
+  font-size: 1.06em;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+
+  display: block;
+
+  margin-bottom: 1.18rem;
+}
+
+.contact__link {
+  @include Raleway500;
+  font-size: 1.25em;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+}
+

@@ -2,6 +2,7 @@
 const baseSuccessCallback = (event) => {
   event.preventDefault();
   window.modals.open('modal-2');
+  window.modals.open('modal-3');
   // В данном колбеке бэкендер, либо разработчик при необходимости будет писать запрос на отправку формы на сервер и обрабатывать возможные ошибки или успешную отправку формы на сервер
 };
 
