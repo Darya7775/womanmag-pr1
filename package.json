@@ -6,6 +6,7 @@
     "IE 11",
     "Firefox ESR"
   ],
+  "homepage": "https://darya7775.github.io/womanmag-pr1",
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
