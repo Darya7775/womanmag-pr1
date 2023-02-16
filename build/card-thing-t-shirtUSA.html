@@ -104,79 +104,80 @@
           <div class="header__overlay"></div>
         </div>
       </header>
-      <main></main>
-      <section class="card-thing">
-        <div class="container card-thing__container">
-          <h2>Футболка USA</h2>
-          <div class="card-thing__content-wrapper">
-            <picture>
-              <source type="image/webp" srcset="img/content/collection-1.webp, img/content/collection-1@2x.webp 2x"><img src="img/content/collection-1.jpg" srcset="img/content/collection-1@2x.jpg 2x" width="350" height="478" alt="девушка в футболке">
-            </picture>
-            <div class="card-thing__wrapper">
-              <div class="card-thing__price">
-                <div class="card-thing__price-new"><span aria-label="новая цена">$129</span></div>
-                <div class="card-thing__price-old"><span aria-label="старая цена">$150</span></div>
-              </div>
-              <form class="card-thing__form" action="https://echo.htmlacademy.ru" method="post">
-                <div class="card-thing__size">
-                  <p>Выберите размер</p>
-                  <input type="radio" id="S" name="size" value="S" placholder="S">
-                  <label for="S">S</label>
-                  <input type="radio" id="M" name="size" value="M" placholder="M" checked>
-                  <label for="M">M</label>
-                  <input type="radio" id="L" name="size" value="L" placholder="L">
-                  <label for="L">L</label>
-                  <input type="radio" id="XL" name="size" value="XL" placholder="XL">
-                  <label for="XL">XL</label>
-                  <input type="radio" id="XXL" name="size" value="XXL" placholder="XXL">
-                  <label for="XXL">XXL</label>
+      <main>
+        <section class="card-thing">
+          <div class="container card-thing__container">
+            <h2>Футболка USA</h2>
+            <div class="card-thing__content-wrapper">
+              <picture>
+                <source type="image/webp" srcset="img/content/collection-1.webp, img/content/collection-1@2x.webp 2x"><img src="img/content/collection-1.jpg" srcset="img/content/collection-1@2x.jpg 2x" width="350" height="478" alt="девушка в футболке">
+              </picture>
+              <div class="card-thing__wrapper">
+                <div class="card-thing__price">
+                  <div class="card-thing__price-new"><span aria-label="новая цена">$129</span></div>
+                  <div class="card-thing__price-old"><span aria-label="старая цена">$150</span></div>
                 </div>
-                <div class="card-thing__color">
-                  <p>Выберите цвет</p>
-                  <input type="radio" id="brown" name="color" value="brown" placholder="brown">
-                  <label class="card-thing__color--brown" for="brown" aria-label="коричневый"></label>
-                  <input type="radio" id="grey" name="color" value="grey" placholder="grey" checked>
-                  <label class="card-thing__color--grey" for="grey" aria-label="серый"></label>
-                  <input type="radio" id="pink" name="color" value="pink" placholder="pink">
-                  <label class="card-thing__color--pink" for="pink" aria-label="розовый"></label>
-                  <input type="radio" id="yellow" name="color" value="yellow" placholder="yellow">
-                  <label class="card-thing__color--yellow" for="yellow" aria-label="желтый"></label>
-                </div>
-                <div class="card-thing__wrap-buttons">
-                  <div class="card-thing__quantity">
-                    <label class="visually-hidden" for="quantity" aria-label="количество товаров">количество</label>
-                    <input type="number" id="quantity" name="quantity" placeholder="1" value="1" required>
+                <form class="card-thing__form" action="https://echo.htmlacademy.ru" method="post">
+                  <div class="card-thing__size">
+                    <p>Выберите размер</p>
+                    <input type="radio" id="S" name="size" value="S" placholder="S">
+                    <label for="S">S</label>
+                    <input type="radio" id="M" name="size" value="M" placholder="M" checked>
+                    <label for="M">M</label>
+                    <input type="radio" id="L" name="size" value="L" placholder="L">
+                    <label for="L">L</label>
+                    <input type="radio" id="XL" name="size" value="XL" placholder="XL">
+                    <label for="XL">XL</label>
+                    <input type="radio" id="XXL" name="size" value="XXL" placholder="XXL">
+                    <label for="XXL">XXL</label>
                   </div>
-                  <button class="card-thing__form-submit" type="submit">Добавить в корзину</button>
-                </div>
-              </form>
+                  <div class="card-thing__color">
+                    <p>Выберите цвет</p>
+                    <input type="radio" id="brown" name="color" value="brown" placholder="brown">
+                    <label class="card-thing__color--brown" for="brown" aria-label="коричневый"></label>
+                    <input type="radio" id="grey" name="color" value="grey" placholder="grey" checked>
+                    <label class="card-thing__color--grey" for="grey" aria-label="серый"></label>
+                    <input type="radio" id="pink" name="color" value="pink" placholder="pink">
+                    <label class="card-thing__color--pink" for="pink" aria-label="розовый"></label>
+                    <input type="radio" id="yellow" name="color" value="yellow" placholder="yellow">
+                    <label class="card-thing__color--yellow" for="yellow" aria-label="желтый"></label>
+                  </div>
+                  <div class="card-thing__wrap-buttons">
+                    <div class="card-thing__quantity">
+                      <label class="visually-hidden" for="quantity" aria-label="количество товаров">количество</label>
+                      <input type="number" id="quantity" name="quantity" placeholder="1" value="1" required>
+                    </div>
+                    <button class="card-thing__form-submit" type="submit">Добавить в корзину</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="list-related-things">
-        <div class="container list-related-things__container">
-          <h2>Связанные товары</h2>
-          <ul class="list-related-things__list">
-            <li class="list-related-things__item">
-              <div class="list-related-things__item-wrap"><a class="list-related-things__link-img" href="#"></a>
-                <picture>
-                  <source type="image/webp" srcset="img/content/collection-4.webp, img/content/collection-4@2x.webp 2x"><img src="img/content/collection-4.jpg" srcset="img/content/collection-4@2x.jpg 2x" width="350" height="478" alt="девушка в футболке">
-                </picture>
-              </div>
-              <h3>Футболка The Trails</h3><span>$129</span>
-            </li>
-            <li class="list-related-things__item">
-              <div class="list-related-things__item-wrap"><a class="list-related-things__link-img" href="#"></a>
-                <picture>
-                  <source type="image/webp" srcset="img/content/collection-7.webp, img/content/collection-7@2x.webp 2x"><img src="img/content/collection-7.jpg" srcset="img/content/collection-7@2x.jpg 2x" width="350" height="478" alt="девушка в топике">
-                </picture>
-              </div>
-              <h3>Топик</h3><span>$129</span>
-            </li>
-          </ul>
-        </div>
-      </section>
+        </section>
+        <section class="list-related-things">
+          <div class="container list-related-things__container">
+            <h2>Связанные товары</h2>
+            <ul class="list-related-things__list">
+              <li class="list-related-things__item">
+                <div class="list-related-things__item-wrap"><a class="list-related-things__link-img" href="#"></a>
+                  <picture>
+                    <source type="image/webp" srcset="img/content/collection-4.webp, img/content/collection-4@2x.webp 2x"><img src="img/content/collection-4.jpg" srcset="img/content/collection-4@2x.jpg 2x" width="350" height="478" alt="девушка в футболке">
+                  </picture>
+                </div>
+                <h3>Футболка The Trails</h3><span>$129</span>
+              </li>
+              <li class="list-related-things__item">
+                <div class="list-related-things__item-wrap"><a class="list-related-things__link-img" href="#"></a>
+                  <picture>
+                    <source type="image/webp" srcset="img/content/collection-7.webp, img/content/collection-7@2x.webp 2x"><img src="img/content/collection-7.jpg" srcset="img/content/collection-7@2x.jpg 2x" width="350" height="478" alt="девушка в топике">
+                  </picture>
+                </div>
+                <h3>Топик</h3><span>$129</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
       <footer class="footer">
         <div class="container footer__container">
           <span class="logo footer__logo">

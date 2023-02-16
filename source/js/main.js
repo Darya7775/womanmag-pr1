@@ -15,7 +15,7 @@ import {initTabs} from './modules/init-tabs';
 // import {initYearCorrection} from './modules/init-year-correction';
 import {initModals} from './modules/init-modals';
 import {Form} from './utils/form/form';
-import Swiper, {Pagination, Navigation, Autoplay} from 'swiper';
+import Swiper, {Pagination, Navigation, Autoplay, A11y, Keyboard} from 'swiper';
 // import {initSearch} from './modules/init-search.js';
 
 
@@ -78,8 +78,9 @@ window.addEventListener('DOMContentLoaded', () => {
   });
   // main
   void new Swiper('.main__wrap', {
-    modules: [Pagination, Autoplay],
+    modules: [Pagination, Autoplay, A11y, Keyboard],
     loop: true,
+    grabCursor: true,
     pagination: {
       el: '.main__pagination',
       clickable: true,
@@ -88,6 +89,20 @@ window.addEventListener('DOMContentLoaded', () => {
       stopOnLastSlide: true,
       disableOnInteraction: true,
     },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true,
+    },
+    a11y: {
+      enebled: true,
+      prevSlideMessage: 'Предыдущий слайд',
+      nextSlideMessage: 'Следующий слайд',
+      firstSlideMessage: 'Первый слайд',
+      lastSlideMessage: 'Послдений слайд',
+      notificationClass: 'swiper-notification',
+    },
+    allowTouchMove: true,
   });
 
   const linkMain = document.querySelectorAll('.main__button_scroll');
@@ -105,7 +120,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // command
   void new Swiper('.command__swiper', {
-    modules: [Pagination, Navigation, Autoplay],
+    modules: [Pagination, Navigation, Autoplay, A11y, Keyboard],
     grabCursor: true,
     loop: true,
     pagination: {
@@ -118,6 +133,19 @@ window.addEventListener('DOMContentLoaded', () => {
     },
     autoplay: {
       disableOnInteraction: true,
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true,
+    },
+    a11y: {
+      enebled: true,
+      prevSlideMessage: 'Предыдущий слайд',
+      nextSlideMessage: 'Следующий слайд',
+      firstSlideMessage: 'Первый слайд',
+      lastSlideMessage: 'Послдений слайд',
+      notificationClass: 'swiper-notification',
     },
   });
   // shop

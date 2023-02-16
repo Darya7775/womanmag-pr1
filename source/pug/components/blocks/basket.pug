@@ -1,0 +1,38 @@
+mixin basket()
+  section.basket
+    .container.basket__container
+      h2 Корзина
+      .basket__wrapper
+        .basket__wrap-title
+          h4 Товар
+          h4 Цена
+          h4 Количество
+          h4 Всего
+        .basket__wrap-product
+          .basket__product-img
+            button.basket__button-delete-product(type="button", aria-label="удалить товар")
+            +picture("content", "collection-1", "jpg", 350, 478, "девушка в футболке")
+            h4 Футболка USA
+          span $129
+          .basket__input-quantity
+            input(type="number", id="quantity", value="1", required)
+            label(for="quantity", aria-label="ввести количество товара") Количество
+          span $129
+        .basket__wrap-coupon
+          form.basket__form-coupon(action="https://echo.htmlacademy.ru", method="post")
+            input(type="number", id="coupon", placeholder="Введите купон")
+            label(for="coupon", aria-label="Введите купон")
+            button.basket__form-button(type="submit") Применить купон
+          button.basket__button(type="button") Обновить корзину
+        .basket__wrap-checkout
+          .basket__checkout-price
+            h5 Подытог:
+            span $129
+          .basket__checkout-button
+            .basket__checkout-total
+              h3 Итого:
+              span $129
+            button.basket__check-button(type="button") Оформить заказ
+
+
+

@@ -1,0 +1,313 @@
+.basket {
+  width: 100%;
+}
+
+.basket__container {
+  padding-top: 6.44rem;
+  padding-bottom: 6.44rem;
+
+  display: grid;
+
+  @include vp-1279 {
+    padding-top: 4rem;
+    padding-bottom: 4rem
+  }
+
+  @include vp-767 {
+    padding-top: 2rem;
+    padding-bottom: 2rem
+  }
+}
+
+.basket__container h2 {
+  @include majorTitle;
+
+  margin: 0 0 6rem;
+
+  @include vp-1279 {
+    margin: 0 0 4rem;
+  }
+
+  @include vp-767 {
+    margin: 0 0 2rem;
+  }
+}
+
+.basket__wrapper {
+  display: grid;
+}
+
+.basket__wrap-title {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 50% 10% 20% 20%;
+
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 3.1rem;
+
+  @include vp-1279 {
+    grid-template-columns: 40% 10% 20% 20%;
+  }
+
+  @include vp-767 {
+    gap: 0.7rem;
+    grid-template-columns: 30% 10% 30% 20%;
+  }
+}
+
+.basket__wrap-product {
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  grid-template-columns: 50% 10% 20% 20%;
+
+  margin-bottom: 4.37rem;
+
+  @include vp-1279 {
+    grid-template-columns: 40% 10% 20% 20%;
+  }
+
+  @include vp-767 {
+    position: relative;
+    gap: 0.7rem;
+    grid-template-columns: 30% 10% 30% 20%;
+    padding-bottom: 60px;
+  }
+}
+
+.basket__product-img {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+
+  @include vp-767 {
+    flex-direction: column;
+
+    gap: 0.7rem;
+  }
+}
+
+.basket__wrap-coupon {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 5.8rem;
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
+
+.basket__form-coupon {
+  display: flex;
+  gap: 1rem;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.basket__wrap-checkout {
+  display: inline-grid;
+  justify-self: end;
+
+  @include vp-767 {
+    display: grid;
+    justify-self: stretch;
+  }
+}
+
+.basket__checkout-price {
+  display: flex;
+  gap: 1.25rem;
+
+  margin-bottom: 1.7rem;
+}
+
+.basket__checkout-button {
+  display: flex;
+  gap: 2rem;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.basket__wrap-title h4 {
+  @include Raleway500;
+  font-size: 1.25em;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+
+  margin: 0 0 2rem;
+
+  @include vp-767 {
+    font-size: 0.8em;
+  }
+}
+
+.basket__product-img span {
+  @include vp-767 {
+    font-size: 0.8em;
+  }
+}
+
+.basket__button-delete-product {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: none;
+
+  background-image: url("../img/svg/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-color: #ffffff;
+
+  cursor: pointer;
+  user-select: none;
+
+  @include hover-focus {
+    opacity: 0.6;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: 47px;
+    background-image: none;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &::before {
+      content: "Удалить";
+      color: #e61a1a;
+
+      width: 100%;
+      height: auto;
+
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      top: 0;
+
+      border: 1px solid #e61a1a;
+      padding: 10px;
+    }
+
+    @include hover-focus {
+      background-color: #e61a1a;
+
+      &::before {
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.basket__product-img h4 {
+  @include Raleway400;
+
+  margin: 0;
+
+  @include vp-767 {
+    font-size: 0.8em;
+  }
+}
+
+.basket__input-quantity label {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.basket__input-quantity input {
+  width: 47px;
+  padding: 0.5rem;
+  border: 1px solid #afafaf;
+
+  text-align: center;
+}
+
+.basket__form-coupon label {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.basket__form-coupon input {
+  border: none;
+  border-bottom: 2px solid #000000;
+  display: block;
+
+  padding: 0.3rem 0.3rem 1rem;
+
+  &::placeholder {
+    @include Raleway500;
+    font-size: 1.06em;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #868686;
+  }
+}
+
+.basket__form-button {
+  @include buttonWhite;
+}
+
+.basket__button {
+  @include buttonWhite;
+}
+
+.basket__checkout-price h5 {
+  @include Raleway500;
+
+  margin: 0;
+}
+
+.basket__checkout-total {
+  @include subtitle;
+  display: flex;
+  gap: 3rem;
+
+  background-color: #f1eadc;
+  padding: 1rem 2rem;
+}
+
+.basket__checkout-total h3 {
+  margin: 0;
+}
+
+.basket__check-button {
+  @include buttonGreen;
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
