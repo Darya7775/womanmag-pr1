@@ -3506,7 +3506,7 @@ input[type=radio] {
   user-select: none;
 }
 
-.contacts-form__checkbox input {
+.contacts-form__checkbox input[type=checkbox] {
   position: absolute;
   width: 1px;
   height: 1px;
