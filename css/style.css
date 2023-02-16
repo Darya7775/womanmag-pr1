@@ -3420,7 +3420,7 @@ input[type=radio] {
 .contacts-form__form {
   display: -ms-grid;
   display: grid;
-  gap: 1rem;
+  gap: 1.3rem;
 }
 
 .contacts-form__form textarea {
@@ -3543,6 +3543,13 @@ input[type=radio] {
   top: 5px;
   left: 5px;
   background-color: #6e9c9f;
+}
+
+.contacts-form__name,
+.contacts-form__email,
+.contacts-form__tel,
+.contacts-form__checkbox {
+  position: relative;
 }
 
 .is-invalid input {
