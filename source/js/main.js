@@ -79,6 +79,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // main
   void new Swiper('.main__wrap', {
     modules: [Pagination, Autoplay],
+    loop: true,
     pagination: {
       el: '.main__pagination',
       clickable: true,
