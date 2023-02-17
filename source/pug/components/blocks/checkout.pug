@@ -1,0 +1,59 @@
+mixin checkout()
+  section.checkout
+    .container.checkout__container
+      h2 Оформление заказа
+      .checkout-form__wrapper(data-form-validate, data-callback="checkout")
+        form.checkout__form(action="https://echo.htmlacademy.ru", method="post")
+          fieldset.checkout__fieldset
+            legend.checkout__legend  Данные покупателя
+            .checkout__input(data-required, data-limitation="cyrillic", data-validate-type="text", data-message-base="Поле обязательно к заполнению")
+              label(for="name", aria-label="Введите Ваше имя")
+              input(type="text", id="name", name="name", placeholder="Имя", required)
+            .checkout__input(data-required, data-validate-type="email", data-message-base="Поле обязательно к заполнению")
+              label(for="e-mail", aria-label="Введите Ваш e-mail")
+              input(type="email", id="e-mail", name="e-mail", placeholder="E-mail", required)
+            .checkout__input(data-required, data-validate-type="phone", data-message-base="Поле обязательно к заполнению")
+              label(for="tel", aria-label="Введите Ваш телефон")
+              input(type="tel", id="tel", name="tel", placeholder="Телефон", required)
+          fieldset.checkout__fieldset
+            legend.checkout__legend Адрес получателя
+            .checkout__input(data-required, data-limitation="cyrillic", data-validate-type="text", data-message-base="Поле обязательно к заполнению")
+              label(for="country", aria-label="Введите название Вашей страны")
+              input(type="text", id="country", name="country", placeholder="Страна", required)
+            .checkout__input(data-required, data-limitation="cyrillic", data-validate-type="text", data-message-base="Поле обязательно к заполнению")
+              label(for="city", aria-label="Введите название Вашего города")
+              input(type="text", id="city", name="city", placeholder="Город", required)
+            .checkout__input(data-required, data-validate-type="text", data-message-base="Поле обязательно к заполнению")
+              label(for="street", aria-label="Введите название Вашей улицы")
+              input(type="text", id="street", name="street", placeholder="Улица", required)
+            .checkout__input(data-required, data-validate-type="text", data-message-base="Поле обязательно к заполнению")
+              label(for="home", aria-label="Введите номер Вашего дома")
+              input(type="text", id="home", name="home", placeholder="Дом", required)
+            .checkout__input
+              label(for="flat", aria-label="Введите номер Вашей квартиры")
+              input(type="number", id="flat", name="flat", placeholder="Квартира")
+          fieldset.checkout__fieldset
+            legend.checkout__legend Комментарии
+            textarea.checkout__textarea(name="messang", cols="30", rows="10", placeholder="Сообщение")
+          fieldset.checkout__fieldset
+            legend.checkout__legend Ваш заказ
+            .checkout__title
+              h4 Товар
+              h4 Всего
+            .checkout__price
+              .checkout__product
+                label(for="product", aria-label="ваш товар") Футболка USA
+                input(type="text", id="product", name="product", value="Футболка USA", readonly)
+              span $129
+            .checkout__price
+              h5 Подытог:
+              span $129
+            .checkout__total
+              h3 Итого:
+              span $129
+          fieldset.checkout__fieldset
+            legend.checkout__legend Способы оплаты
+            .checkout-form__cash(data-required, data-validate-type="checkbox", data-message-base="Необходимо выбрать оплату!")
+              input(type="checkbox", id="cash", name="cash", required, checked)
+              label(for="cash") Оплата наличными
+          button.checkout__button(type="submit", aria-label="Отправить заказ в магазин") Разместить заказ

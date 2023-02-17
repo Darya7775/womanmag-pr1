@@ -6,14 +6,14 @@ mixin modal-feedback()
         button.form___close(type="button", data-close-modal)
         span.form___text Заказать обратный звонок
         .form__name(data-required, data-limitation="cyrillic", data-validate-type="text", data-message-base="Поле обязательно к заполнению")
-          label.visually-hidden(for="name") Имя
-          input(type="text", name="name", id="name", placeholder="Имя", required)
+          label.visually-hidden(for="modal-name") Имя
+          input(type="text", name="name", id="modal-name", placeholder="Имя", required)
         .form__email(data-validate-type="email")
-          label.visually-hidden(for="email") E-mail
-          input(type="email", name="email", id="email", placeholder="E-mail")
+          label.visually-hidden(for="modal-email") E-mail
+          input(type="email", name="email", id="modal-email", placeholder="E-mail")
         .form__tel(data-required, data-validate-type="phone", data-message-base="Поле обязательно к заполнению")
-          label.visually-hidden(for="telephone") Телефон
-          input(type="tel", name="telephone", id="telephone", placeholder="Телефон", required)
+          label.visually-hidden(for="modal-telephone") Телефон
+          input(type="tel", name="telephone", id="modal-telephone", placeholder="Телефон", required)
         .form__checkbox(data-required, data-validate-type="checkbox", data-message-base="Необходимо Ваше согласие!")
           input(type="checkbox" name="consentToDataProcessing" id="consent", required)
           label(for="consent") Я согласен на обработку моих персональных данных

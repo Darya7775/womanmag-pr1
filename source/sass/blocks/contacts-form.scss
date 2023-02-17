@@ -15,7 +15,7 @@
 
 .contacts-form__form {
   display: grid;
-  gap: 1rem;
+  gap: 1.3rem;
 }
 
 .contacts-form__form textarea {
@@ -34,19 +34,7 @@
 }
 
 .contacts-form__form input {
-  border: none;
-  border-bottom: 2px solid #000000;
-  display: block;
-
-  padding: 0.3rem 0.3rem 1rem;
-
-  &::placeholder {
-    @include Raleway500;
-    font-size: 1.06em;
-    line-height: 140%;
-    letter-spacing: 0.02em;
-    color: #868686;
-  }
+  @include input;
 
   @include vp-1279 {
     width: 40%;
@@ -58,35 +46,16 @@
 }
 
 .contacts-form__button {
-  @include Raleway400;
-  font-size: 1.06em;
-  line-height: 140%;
-  letter-spacing: 0.02em;
-  color: $color-default-white;
-
-  border: none;
-  background-color: #6e9c9f;
-  padding: 1.38rem 0;
+  @include buttonGreen;
 
   width: 20%;
-
-  cursor: pointer;
-  user-select: none;
-
-  @include hover {
-    opacity: 0.6;
-  }
 
   @include vp-1279 {
     width: 40%;
   }
-
-  @include vp-767 {
-    width: 100%;
-  }
 }
 
-.contacts-form__checkbox input {
+.contacts-form__checkbox input[type="checkbox"] {
   position: absolute;
 
   width: 1px;
@@ -128,6 +97,13 @@
   left: 5px;
 
   background-color:#6e9c9f;
+}
+
+.contacts-form__name,
+.contacts-form__email,
+.contacts-form__tel,
+.contacts-form__checkbox {
+  position: relative;
 }
 
 .is-invalid {

@@ -14,7 +14,7 @@ mixin header(headerMods, currentUrl, name)
       .header__wrapper
         div
           button.header__button(type="button", aria-label="Обратный звонок", data-open-modal="modal-1")
-            p.header__text Заказать звонок?
+            span.header__text Заказать звонок?
             +icon("telephone", 17, 17)
           .header__wrap-tel
             a.header__tel(href = "tel:+74958235412") +7 (495) 823-54-12

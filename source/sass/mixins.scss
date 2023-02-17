@@ -244,6 +244,10 @@
   background-color: #6e9c9f;
   padding: 1.38rem 3.13rem;
 
+  @include Raleway400;
+  font-size: 1.06em;
+  line-height: 140%;
+  letter-spacing: 0.02em;
   color: $color-default-white;
   text-align: center;
 
@@ -262,6 +266,27 @@
     width: 100%;
     padding: 1.38rem 1rem;
     font-size: 0.9rem;
+  }
+}
+
+// input
+@mixin input {
+  border: none;
+  border-bottom: 2px solid #000000;
+  display: block;
+
+  padding: 0.3rem 0.3rem 1rem;
+
+  &::placeholder {
+    @include Raleway500;
+    font-size: 1.06em;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #868686;
+  }
+
+  @include vp-767 {
+    width: 100%;
   }
 }
 

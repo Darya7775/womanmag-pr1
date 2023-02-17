@@ -1,0 +1,215 @@
+.checkout {
+  width: 100%;
+}
+
+.checkout__container {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  @include vp-1279 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @include vp-767 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.checkout__container h2 {
+  @include majorTitle;
+
+  margin: 0 0 6rem;
+}
+
+.checkout__form {
+  display: grid;
+  gap: 4rem;
+}
+
+.checkout__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  gap: 2rem;
+}
+
+.checkout__legend {
+  @include subtitle;
+
+  margin-bottom: 3rem;
+}
+
+.checkout__input label {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.checkout__input {
+  position: relative;
+}
+
+.checkout__input input {
+  @include input;
+}
+
+.checkout__textarea {
+  border: none;
+  border-bottom: 2px solid #000000;
+  padding: 2rem;
+
+  width: 50%;
+
+  @include vp-1279 {
+    width: 70%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.checkout__title {
+  display: grid;
+  grid-template-columns: 70% 30%;
+
+  & h4 {
+    @include Raleway500;
+    font-size: 1.25em;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+
+    margin: 0;
+  }
+}
+
+.checkout__price {
+  display: grid;
+  grid-template-columns: 70% 30%;
+
+  & h5,
+  & span {
+    @include Raleway500;
+    font-size: 1.06em;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+
+    margin: 0;
+  }
+}
+
+.checkout__total {
+  display: grid;
+  grid-template-columns: 70% 30%;
+
+  padding: 1rem;
+  background-color: #f1eadc;
+
+  & h3,
+  & span {
+    @include Raleway500;
+    font-size: 1.25em;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+
+    margin: 0;
+  }
+}
+
+.checkout__product label {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.checkout__product input {
+  @include Raleway500;
+  font-size: 1.06em;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  border: none;
+
+  cursor: auto;
+}
+
+.checkout-form__cash {
+  position: relative;
+}
+
+
+.checkout-form__cash input[type="checkbox"]{
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.checkout-form__cash label {
+  padding-left: 36px;
+
+  position: relative;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #000000;
+  }
+}
+
+.checkout-form__cash input:checked + label::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  background-color: #000000;
+}
+
+.checkout__button {
+  @include buttonGreen;
+}

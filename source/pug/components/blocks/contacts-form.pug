@@ -2,7 +2,7 @@ mixin contacts-form()
   section.contacts-form
     .container.contacts-form__container
       h3 Напишите нам
-      .contacts-form__wrapper(data-form-validate, data-callback="base")
+      .contacts-form__wrapper(data-form-validate, data-callback="contacts")
         form.contacts-form__form(action="https://echo.htmlacademy.ru", method="post")
           .contacts-form__name(data-required, data-limitation="cyrillic", data-validate-type="text", data-message-base="Поле обязательно к заполнению")
             label(for="name")
@@ -15,6 +15,6 @@ mixin contacts-form()
             input(type="tel", id="tel", name="tel", placeholder="Телефон", required)
           textarea(name="messang", cols="30", rows="10", placeholder="Сообщение")
           .contacts-form__checkbox(data-required, data-validate-type="checkbox", data-message-base="Необходимо Ваше согласие!")
-            input(type="checkbox" name="consentToDataProcessing" id="consent", required)
-            label(for="consent") Я согласен на обработку моих персональных данных
+            input(type="checkbox" name="consentToDataProcessing" id="contacts-consent", required)
+            label(for="contacts-consent") Я согласен на обработку моих персональных данных
           button.contacts-form__button(type="submit", aria-label="Отправить cообщение") Отправить

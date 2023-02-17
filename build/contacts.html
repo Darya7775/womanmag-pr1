@@ -87,8 +87,7 @@
           </nav>
           <div class="header__wrapper">
             <div>
-              <button class="header__button" type="button" aria-label="Обратный звонок" data-open-modal="modal-1">
-                <p class="header__text">Заказать звонок?</p>
+              <button class="header__button" type="button" aria-label="Обратный звонок" data-open-modal="modal-1"><span class="header__text">Заказать звонок?</span>
                 <svg width="17" height="17" aria-hidden="true">
                   <use xlink:href="#telephone"></use>
                 </svg>
@@ -121,7 +120,7 @@
         <section class="contacts-form">
           <div class="container contacts-form__container">
             <h3>Напишите нам</h3>
-            <div class="contacts-form__wrapper" data-form-validate data-callback="base">
+            <div class="contacts-form__wrapper" data-form-validate data-callback="contacts">
               <form class="contacts-form__form" action="https://echo.htmlacademy.ru" method="post">
                 <div class="contacts-form__name" data-required data-limitation="cyrillic" data-validate-type="text" data-message-base="Поле обязательно к заполнению">
                   <label for="name"></label>
@@ -137,8 +136,8 @@
                 </div>
                 <textarea name="messang" cols="30" rows="10" placeholder="Сообщение"></textarea>
                 <div class="contacts-form__checkbox" data-required data-validate-type="checkbox" data-message-base="Необходимо Ваше согласие!">
-                  <input type="checkbox" name="consentToDataProcessing" id="consent" required>
-                  <label for="consent">Я согласен на обработку моих персональных данных</label>
+                  <input type="checkbox" name="consentToDataProcessing" id="contacts-consent" required>
+                  <label for="contacts-consent">Я согласен на обработку моих персональных данных</label>
                 </div>
                 <button class="contacts-form__button" type="submit" aria-label="Отправить cообщение">Отправить</button>
               </form>
@@ -190,9 +189,40 @@
         </div>
       </footer>
     </div>
+    <div class="modal modal--preload" data-modal="modal-1" id="modal-1">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__form" data-form-validate data-callback="base">
+        <form class="form" action="https://echo.htmlacademy.ru" method="post">
+          <button class="form___close" type="button" data-close-modal></button><span class="form___text">Заказать обратный звонок</span>
+          <div class="form__name" data-required data-limitation="cyrillic" data-validate-type="text" data-message-base="Поле обязательно к заполнению">
+            <label class="visually-hidden" for="modal-name">Имя</label>
+            <input type="text" name="name" id="modal-name" placeholder="Имя" required>
+          </div>
+          <div class="form__email" data-validate-type="email">
+            <label class="visually-hidden" for="modal-email">E-mail</label>
+            <input type="email" name="email" id="modal-email" placeholder="E-mail">
+          </div>
+          <div class="form__tel" data-required data-validate-type="phone" data-message-base="Поле обязательно к заполнению">
+            <label class="visually-hidden" for="modal-telephone">Телефон</label>
+            <input type="tel" name="telephone" id="modal-telephone" placeholder="Телефон" required>
+          </div>
+          <div class="form__checkbox" data-required data-validate-type="checkbox" data-message-base="Необходимо Ваше согласие!">
+            <input type="checkbox" name="consentToDataProcessing" id="consent" required>
+            <label for="consent">Я согласен на обработку моих персональных данных</label>
+          </div>
+          <button class="form___submit" type="submit">Заказать звонок</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal" data-modal="modal-2" id="modal-2">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__success"><span class="modal__text">Отлично! Мы скоро вам перезвоним.</span>
+        <button class="form___submit" type="button" data-close-modal>Закрыть</button>
+      </div>
+    </div>
     <div class="modal" data-modal="modal-3" id="modal-3">
       <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__succes"><span class="modal__text">Сообщение успешно отправлено</span>
+      <div class="modal__success"><span class="modal__text">Сообщение успешно отправлено</span>
         <button class="form___submit" type="button" data-close-modal>Закрыть</button>
       </div>
     </div>
