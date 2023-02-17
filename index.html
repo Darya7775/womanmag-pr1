@@ -87,8 +87,7 @@
           </nav>
           <div class="header__wrapper">
             <div>
-              <button class="header__button" type="button" aria-label="Обратный звонок" data-open-modal="modal-1">
-                <p class="header__text">Заказать звонок?</p>
+              <button class="header__button" type="button" aria-label="Обратный звонок" data-open-modal="modal-1"><span class="header__text">Заказать звонок?</span>
                 <svg width="17" height="17" aria-hidden="true">
                   <use xlink:href="#telephone"></use>
                 </svg>
@@ -302,16 +301,16 @@
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
           <button class="form___close" type="button" data-close-modal></button><span class="form___text">Заказать обратный звонок</span>
           <div class="form__name" data-required data-limitation="cyrillic" data-validate-type="text" data-message-base="Поле обязательно к заполнению">
-            <label class="visually-hidden" for="name">Имя</label>
-            <input type="text" name="name" id="name" placeholder="Имя" required>
+            <label class="visually-hidden" for="modal-name">Имя</label>
+            <input type="text" name="name" id="modal-name" placeholder="Имя" required>
           </div>
           <div class="form__email" data-validate-type="email">
-            <label class="visually-hidden" for="email">E-mail</label>
-            <input type="email" name="email" id="email" placeholder="E-mail">
+            <label class="visually-hidden" for="modal-email">E-mail</label>
+            <input type="email" name="email" id="modal-email" placeholder="E-mail">
           </div>
           <div class="form__tel" data-required data-validate-type="phone" data-message-base="Поле обязательно к заполнению">
-            <label class="visually-hidden" for="telephone">Телефон</label>
-            <input type="tel" name="telephone" id="telephone" placeholder="Телефон" required>
+            <label class="visually-hidden" for="modal-telephone">Телефон</label>
+            <input type="tel" name="telephone" id="modal-telephone" placeholder="Телефон" required>
           </div>
           <div class="form__checkbox" data-required data-validate-type="checkbox" data-message-base="Необходимо Ваше согласие!">
             <input type="checkbox" name="consentToDataProcessing" id="consent" required>
@@ -323,7 +322,7 @@
     </div>
     <div class="modal" data-modal="modal-2" id="modal-2">
       <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__succes"><span class="modal__text">Отлично! Мы скоро вам перезвоним.</span>
+      <div class="modal__success"><span class="modal__text">Отлично! Мы скоро вам перезвоним.</span>
         <button class="form___submit" type="button" data-close-modal>Закрыть</button>
       </div>
     </div>
