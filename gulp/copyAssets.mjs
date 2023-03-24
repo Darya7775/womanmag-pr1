@@ -10,15 +10,9 @@ const copy = () =>
       [
         'source/fonts/**',
         'source/img/**',
-        'source/data/**',
         'source/favicon/**',
         'source/video/**',
         'source/downloads/**',
-        'source/components/**/style/**',
-        'source/components/**/js/**',
-        'source/components/**/component-demo.pug',
-        'source/components/**/*.php',
-        'source/components/**/PHPMailer/**',
         'source/*.php',
       ],
       {

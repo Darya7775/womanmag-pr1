@@ -2,7 +2,7 @@
 // ---------------------------------
 
 @import "vendor/normalize";
-@import "vendor/prism";
+// @import "vendor/prism";
 // Swiper 7.4.1
 @import "vendor/swiper";
 
@@ -38,78 +38,3 @@
 @import "blocks/basket";
 @import "blocks/checkout";
 @import "blocks/order-success";
-
-// Components
-// ---------------------------------
-
-// @import "../components/auto-resize-textarea/style/auto-resize-textarea";
-// @import "../components/phone-mask/style/phone-mask";
-// @import "../components/navigation-changer/style/navigation-changer";
-// @import "../components/custom-select/style/custom-select";
-// @import "../components/scroll-translator/style/scroll-translator";
-// @import "../components/modals/style/modal";
-// @import "../components/cookies/style/cookies";
-// @import "../components/accordion/style/accordion";
-// @import "../components/accordion/style/data-accordion";
-// @import "../components/tabs/style/tabs";
-// //@import "../components/tabs/style/data-tabs";
-// @import "../components/form-validate/style/custom-input";
-// @import "../components/form-validate/style/custom-toggle";
-// @import "../components/form-validate/style/toggle-group";
-// @import "../components/dynamic-adaptive/style/dynamic-adaptive";
-// @import "../components/adaptive-runner/style/adaptive-runner";
-// @import "../components/simple-cursor/style/simple-cursor";
-// @import "../components/marquee/style/marquee";
-
-// ---------------------------------
-
-// ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg
-
-// ❗ обязательно используйте mixin hover-focus для отключения ховеров на тач устройствах
-/* @mixin hover-focus {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
-
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-/*  @include hover-focus {
-      opacity: 0.8;
-    }
-*/
-// но не используем для текстовых полей ( input, textarea )
-// так же в сборке есть отдельный миксин для hover
-/*@mixin hover {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
-  }
-*/
-// для focus
-/*@mixin focus {
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-// и для active
-/*@mixin active {
-    &.focus-visible:active {
-      @content;
-    }
-  }
-*/
-// адаптив пишем внутри каждого класса (смотрим container.scss)
-
-// для фикса проблем с vh на iOS в сборке подключен скрипт
-// используя vh на проекте задавайте их также как в примере в utils.scss
-
-// для любых transition обязательно указывайте transition-property
-// transition: $trans-default ❌ ---> transition: color $trans-default ✅
